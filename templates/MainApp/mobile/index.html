@@ -1,0 +1,122 @@
+{% load static %}
+{% load pwa %}
+{% load webpush_notifications %}
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en" data-theme="dash">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% webpush_header %}
+  {% progressive_web_app_meta %}
+  {% tailwind_css %}
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+  <script src="{% static 'js/htmx.min.js' %}"></script>
+  <title>Main</title>
+</head>
+
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' dir='rtl' class="bg-main1 text-main5-t ">
+  <div class="sticky top-0 z-10">
+    <div class="w-full h-20 bg-[#f1f1f1] rounded-b-3xl flex justify-between items-center px-4 pt-2  ">
+      <h1 class=" whitespace-nowrap text-lg font-bold max-[500px]:text-sm max-[500px]:whitespace-normal">جمعية حفاوة
+        لخدمة الحاج والمعتمر والزائر</h1>
+      <div class="flex flex-col items-center justify-center h-full">
+        <img src="{% static 'icons/logoF.svg' %}" alt="" class="size-10  object-center">
+        <img src="{% static 'icons/nameF.svg' %}" alt="" class="size-12 object-center">
+      </div>
+    </div>
+  </div>
+  <div class="animate-fade-in">
+
+    {% if messages %}
+    <div class="flex justify-center items-center ">
+      {% for m in messages %}
+      {% if m.tags == 'success' %}
+      <div class="z-20 p-4 mx-4 text-sm absolute bottom-20 text-green-800 rounded-lg bg-green-300">
+        <span class=" font-medium">تم بنجاح !</span> {{m}}
+      </div>
+      {% endif %}
+      {% if m.tags == 'error' %}
+      <div class="z-20 p-4 mx-4 text-sm absolute bottom-20 text-red-800 rounded-lg bg-red-300">
+        <span class=" font-medium">حدث خطاء !</span> {{m}}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% block main %}
+    <div class="flex flex-col px-6  h-full ">
+      <p class="my-2 text-3xl font-semibold">الصفحة الرئيسية</p>
+      <div class="w-full flex items-center justify-center bg-main4 rounded-lg aspect-h-2 aspect-w-4 h-1/4">
+        {% if ads.img %}
+        <img src="{{ads.img.url}}" alt="" class="w-full max-h-48 rounded-lg object-fill ">
+        {% else %}
+        <img src="{% static 'media\app\assets\banner.png' %}" alt="" class="w-full rounded-lg object-fill ">
+        {% endif %}
+      </div>
+      <p class="my-3 text-xl font-semibold">الطلبات الحالية</p>
+      <div class="shadow-inner bg-main1-t rounded-xl">
+        <table class=" w-full  divide-y-2 divide-main4-t100 text-sm">
+          <thead class="ltr:text-left rtl:text-right">
+            <tr>
+              <th class="whitespace-nowrap px-4 py-2 font-medium text-center text-gray-900">
+                الطلبات
+              </th>
+              <th class="whitespace-nowrap px-4 py-2 font-medium  text-gray-900">
+                حالة طلب
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for rs in R %}
+            <tr>
+              <td class=" px-4 py-2 font-bold text-main4"><a href="{% url 'viewReq' rs.id %}"> طلب حضور -
+                  {{rs.event.name}} </a></td>
+              {% if rs.isApproved == -1 %}
+              <td class=" p-4 text-gray-700 "><span class="p-2 bg-blue-500 rounded-xl">قيدالمراجعة</span></td>
+              {% elif rs.isApproved == 0 %}
+              <td class=" p-4 text-gray-700 "><span class="p-2 bg-red-500 rounded-xl">مرفوض</span></td>
+              {% elif rs.isApproved == 1 %}
+              <td class=" p-4 text-gray-700"><span class="p-2 bg-green-500 rounded-xl">مقبول</span></td>
+              {% endif %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <p class="my-3 text-xl  font-semibold">مواعيد الاحتفاءات</p>
+      {% for e in E %}
+      <div class=" overflow-hidden mb-2 flex flex-col bg-main3-t hover:shadow-xl rounded-lg ">
+        <a href="{% url 'order' %}" class="rounded-lg p-4 shadow-sm shadow-indigo-100 max-h-48">
+          {% if e.image %}
+          <img alt="" src="{{e.image.url}}" class="h-28 w-full rounded-md object-cover" />
+          {% endif %}
+          <div class="flex justify-between pt-2">
+            <dl>
+              <div>
+                <dt class="sr-only">date</dt>
+                <dd class="text-sm text-main1-t">{{e.date | date:"Y /n /j"}} | {{e.time|time:"H:i"}}</dd>
+              </div>
+
+              <div>
+                <dt class="sr-only"></dt>
+                <dd class="font-medium text-main1-t">{{e.name}}</dd>
+              </div>
+            </dl>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% endblock main %}
+  </div>
+  <hr class=" bg-transparent mt-20">
+  <div class="flex justify-center w-full">
+    {% include "MainApp/mobile/components/bottomNav.html" %}
+  </div>
+</body>
+
+</html>

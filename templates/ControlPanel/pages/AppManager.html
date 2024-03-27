@@ -1,0 +1,19 @@
+{% extends 'ControlPanel\index.html' %}
+{% block main %}
+<div class="bg-white h-full rounded-lg drop-shadow-lg p-4 overflow-auto animate-fade-in">
+    <h1 class="text-2xl font-bold text-main5 p-2"> واجهة التطبيق</h1>
+    <hr class="my-2">
+    <form action="{% url 'addPic' %}" method="post" enctype="multipart/form-data"
+        class="flex items-start  gap-2 flex-col">
+        {% csrf_token %}
+        <label for="image" class="text-lg text-main5">اختر صورة: </label>
+        <input type="file" name="image"
+            class="rounded-lg border-none bg-main1 shadow-inner p-3 text-lg placeholder:text-center">
+        <div>
+            <button type="submit" class="bg-main2 text-white rounded-lg p-3">اضافة</button>
+            <button hx-get="{% url 'addPic' %}" hx-confirm="هل انت متاكد من ازالة الصورة "  class="bg-red-600 text-white rounded-lg p-3">ازالة</a>
+        </div>
+
+    </form>
+</div>
+{% endblock main %}

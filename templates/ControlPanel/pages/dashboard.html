@@ -1,0 +1,120 @@
+{% extends 'ControlPanel\index.html' %}
+{% block main %}
+<div class="bg-white h-full flex flex-col w-full  rounded-lg drop-shadow-lg p-4 overflow-auto animate-fade-in">
+    <div class="grid grid-cols-3 gap-2  h-1/4">
+        <div class="bg-main1-t rounded-lg shadow-inner flex flex-col justify-center items-center">
+            <span class="text-3xl ">{{profiles}}</span>
+            <hr>
+            <a class="text-xl max-md:text-sm font-medium text-main5">الملفات الشخصية</a>
+        </div>
+        <div class="bg-main1-t rounded-lg shadow-inner flex flex-col justify-center items-center">
+            <span class="text-3xl ">{{events}}</span>
+            <hr>
+            <a class="text-xl max-md:text-sm font-medium text-main5">احتفاءات</a>
+        </div>
+        <div class="bg-main1-t rounded-lg shadow-inner flex flex-col justify-center items-center">
+            <span class="text-3xl ">{{requests}}</span>
+            <a class="text-xl max-md:text-sm font-medium text-main5">طلبات</a>
+        </div>
+    </div>
+    <hr class="my-2">
+    <h1 class="text-2xl font-bold text-main5 p-2"> طلبات قيد المراجعة</h1>
+    <div class=" bg-main1-t shadow-inner rounded-lg">
+        <table class="min-w-full divide-y-2 divide-gray-200 text-sm">
+            <thead class="ltr:text-left rtl:text-right">
+                <tr>
+                    <th class=" px-4 py-2 font-medium text-main5">اسم المرسل</th>
+                    <th class=" px-4 py-2 font-medium text-main5">تاريخ الارسال</th>
+                    <th class=" px-4 py-2 font-medium text-main5">تاريخ الاحتفاء</th>
+                    <th class=" px-4 py-2 font-medium text-main5">عدد الزوار</th>
+                    <th class="px-4 py-2"></th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+                {% for r in requestList %}
+                <tr>
+                    <td class=" px-4 py-2 font-medium text-main5">{{r.requester.first_name}}
+                        {{r.requester.last_name}}</td>
+                    <td class=" px-4 py-2 text-main4">{{r.createDate|date:"Y/m/d"}}</td>
+                    <td class=" px-4 py-2 text-main4">{{r.event.time|time:"H:i"}}
+                        {{r.event.date|date:"Y/m/d"}}</td>
+                    <td class=" px-4 py-2 text-main4">{{r.numberOfGuests}}</td>
+                    <td class=" px-4 py-2">
+                        <a href="{% url 'viewreq' r.id %}"
+                            class="inline-block rounded bg-main2 px-4 py-2 text-xs font-medium text-white hover:bg-main2-t">
+                            عرض
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <hr class="my-2">
+    <h1 class="text-2xl font-bold text-main5 p-2"> الاحتفاءات الحالية</h1>
+
+    <div class=" bg-main1-t shadow-inner rounded-lg">
+        <table class="min-w-full divide-y-2 divide-gray-200 text-sm">
+            <thead class="ltr:text-left rtl:text-right">
+                <tr>
+                    <th class=" px-4 py-2 font-medium text-main5">عنوان</th>
+                    <th class=" px-4 py-2 font-medium text-main5">تاريخ </th>
+                    <th class=" px-4 py-2 font-medium text-main5">حد اقصى للزوار</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+                {% for e in eventsList %}
+                <tr>
+                    <td class=" px-4 py-2 font-medium text-main5">{{e.name}}</td>
+                    <td class=" px-4 py-2 text-main4">{{e.time|time:"H:i"}}
+                        {{e.date|date:"Y/m/d"}}</td>
+                    <td class=" px-4 py-2 text-main4">{{e.maxcap}}</td>
+                    <td class=" px-4 py-2">
+                        <a href="{% url 'viewEvent' e.id %}"
+                            class="inline-block rounded bg-main3-t px-4 py-2 text-xs font-medium text-white hover:bg-main2-t">
+                            عرض
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <hr class="my-2">
+    <h1 class="text-2xl font-bold text-main5 p-2">المستخدمين الجدد</h1>
+
+    <div class=" bg-main1-t shadow-inner rounded-lg">
+        <table class="min-w-full divide-y-2 divide-gray-200 text-sm">
+            <thead class="ltr:text-left rtl:text-right">
+                <tr>
+                    <th class=" px-4 py-2 font-medium text-main5">الاسم</th>
+                    <th class=" px-4 py-2 font-medium text-main5">تاريخ التسجيل </th>
+                    <th class=" px-4 py-2 font-medium text-main5"> رقم الهاتف</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+                {% for e in profileList %}
+                <tr>
+                    <td class=" px-4 py-2 font-medium text-main5">{{e.user.first_name}}
+                        {{e.user.last_name}}</td>
+                    <td class=" px-4 py-2 text-main4">{{e.user.date_created|date:"Y/m/d"}}</td>
+                    <td class=" px-4 py-2 text-main4">{{e.user.phone}} {{e.user.cp}}+</td>
+                    <td class=" px-4 py-2 ">
+                        <a href="{% url 'userProfile' e.user.id %}"
+                            class="inline-block rounded bg-main3-t px-4 py-2 text-xs font-medium text-white hover:bg-main2-t">
+                            عرض
+                        </a>
+                        <a href="{% url 'acceptAccount' e.user.id %}"
+                            class="inline-block rounded bg-main3-t px-4 py-2 text-xs font-medium text-white hover:bg-main2-t">
+                            تفعيل الحساب
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock main %}

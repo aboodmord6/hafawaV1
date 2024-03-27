@@ -1,0 +1,79 @@
+{% for e in d %}
+<div class="flow-root overflow-y-auto rounded-lg border border-gray-100 py-3 shadow-sm">
+    <a href="{{ request.META.HTTP_REFERER }}"
+        class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full top-2 end-2 dark:border-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 -960 960 960">
+            <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+        </svg>
+    </a>
+    <dl class="-my-3 divide-y divide-gray-100 text-sm">
+        <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium text-gray-900">اسم المرسل</dt>
+            <dd class="text-gray-700 sm:col-span-2">{{e.requester.first_name}} {{e.requester.last_name}}</dd>
+        </div>
+        <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium text-gray-900">حالة الطلب</dt>
+            {% if e.isApproved == -1 %}
+            <dd class="text-gray-700 sm:col-span-2"> قيد المراجعة</dd>
+            {% elif e.isApproved == 0 %}
+            <dd class="text-gray-700 sm:col-span-2"> مرفوض</dd>
+            {% elif e.isApproved == 1 %}
+            <dd class="text-gray-700 sm:col-span-2"> مقبول</dd>
+            {% endif %}
+        </div>
+        <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium text-gray-900">
+                رقم الهاتف
+            </dt>
+            <dd class="text-gray-700 sm:col-span-2">{{e.requester.phone}} {{e.requester.cp}}+</dd>
+        </div>
+        <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium text-gray-900">
+                اسم الفندق
+            </dt>
+            <dd class="text-gray-700 sm:col-span-2">{{e.hotelName}}</dd>
+        </div>
+        <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium text-gray-900">
+                عنوان الفندق
+            </dt>
+            <dd class="text-gray-700 sm:col-span-2">{{e.hotelLocation}}</dd>
+        </div>
+        <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium text-gray-900">عدد الزوار</dt>
+            <dd class="text-gray-700 sm:col-span-2">{{e.numberOfGuests}}</dd>
+        </div>
+        <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium text-gray-900">
+                جنسية الزوار
+            </dt>
+            <dd class="text-gray-700 sm:col-span-2">{{e.nationaltyOfvisitors}}</dd>
+        </div>
+        {% if e.isApproved == 0 or e.isApproved == 1 %}
+        <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium text-gray-900">
+                ملاحظات
+            </dt>
+            <dd class="text-gray-700 sm:col-span-2">{{e.notes}}</dd>
+        </div>
+        {% endif %}
+        {% if e.isApproved == -1 %}
+        <div class="grid grid-cols-1 gap-1 p-3 sm:gap-4">
+            <button hx-delete="{% url 'deleteReq' e.id %}" onclick="this.disabled=true; window.location.href='/';"
+                class="inline-flex items-center justify-center w-full h-10 font-bold text-lg text-white bg-red-500 border-2 border-white rounded-xl">
+                حذف الطلب
+            </button>
+        </div>
+        {% endif %}
+    </dl>
+</div>
+{% endfor %}
+
+
+<!-- 
+hotelName
+hotelLocation
+nationaltyOfvisitors
+event 
+-->

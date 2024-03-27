@@ -1,0 +1,93 @@
+{% extends 'ControlPanel\index.html' %}
+{% block main %}
+<div class="bg-white h-full rounded-lg drop-shadow-lg p-4 overflow-auto animate-fade-in">
+
+    <h1 class="text-2xl font-bold text-main5 p-2">تعديل على احتفاء</h1>
+    <hr class="my-2">
+    <div class="text-gray-700 flex">
+        <form method="post" enctype="multipart/form-data" class="h-full">
+            {% csrf_token %}
+            <div class="grid md:grid-cols-2 text-sm items-end">
+                <div class="grid grid-cols-3">
+                    <div class="px-4 py-2 font-semibold flex items-center justify-center ">عنوان</div>
+                    <div class="px-2 py-1 col-span-2">
+                        <input type="text" required name="name"
+                            class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 text-lg placeholder:text-center">
+                    </div>
+                </div>
+                <div class="grid grid-cols-3">
+                    <div class="px-4 py-2 font-semibold flex items-center justify-center ">حد الاقصى للزوار</div>
+                    <div class="px-2 py-1 col-span-2">
+                        <input type="text" required name="maxcap"
+                            class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 text-lg placeholder:text-center">
+                    </div>
+                </div>
+                <div class="grid grid-cols-3">
+                    <div class="px-4 py-2 font-semibold flex items-center justify-center ">التاريخ</div>
+                    <div class="px-2 py-1 col-span-2">
+                        <input type="date" required name="date"
+                            class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 text-lg placeholder:text-center">
+                    </div>
+                </div>
+                <div class="grid grid-cols-3">
+                    <div class="px-4 py-2 font-semibold flex items-center justify-center ">وقت</div>
+                    <div class="px-2 py-1 col-span-2">
+                        <input type="time" required name="time"
+                            class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 text-lg placeholder:text-center">
+                    </div>
+                </div>
+                <div class="grid grid-cols-3">
+                    <div class="px-4 py-2 font-semibold flex items-center justify-center">الصورة</div>
+                    <div class="px-2 py-1 col-span-2">
+                        <input
+                            class=" w-full text-lg text-main4-t100 bg-main1 shadow-inner p-3 border-none rounded-lg cursor-pointe focus:outline-none"
+                            type="file" name="image">
+                    </div>
+                </div>
+                <div class="flex justify-center col-span-full">
+                    <button type="submit" id="buttonS" class="w-1/4 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5  my-2 ">
+                         حفظ الحتفاء
+                    </button>
+                </div>
+                <style>
+                    @keyframes moveDots {
+                        0% {
+                            content: '.';
+                        }
+
+                        25% {
+                            content: '..';
+                        }
+
+                        50% {
+                            content: '...';
+                        }
+
+                        75% {
+                            content: '..';
+                        }
+
+                        100% {
+                            content: '.';
+                        }
+                    }
+
+                    .loading-dots::after {
+                        content: '.';
+                        animation: moveDots 1s infinite;
+                    }
+                </style>
+
+                <script>
+                    const button = document.querySelector('#buttonS');
+                    const form = document.querySelector('form');
+                    form.addEventListener('submit', () => {
+                        button.disabled = true;
+                        button.innerHTML = '<span class="loading-dots"></span> جاري الحفظ';
+                    });
+                </script>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock main %}

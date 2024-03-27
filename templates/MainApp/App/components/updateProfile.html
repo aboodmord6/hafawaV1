@@ -1,0 +1,110 @@
+<div class="text-gray-700 flex ">
+    <form action="{% url 'updateProfile' Profile.user.id %}" method="post" enctype="multipart/form-data" class="h-full">
+        {% csrf_token %}
+        <div class="grid md:grid-cols-2 text-sm items-end">
+            <div class="grid grid-cols-3">
+                <div class="px-4 py-2 font-semibold flex items-center justify-center ">اسم الاول</div>
+                <div class="px-2 py-1 col-span-2">
+                    <input type="text" required name="FN"
+                        class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 text-lg placeholder:text-center"
+                        value="{{Profile.user.first_name}} ">
+                </div>
+            </div>
+            <div class="grid grid-cols-3">
+                <div class="px-4 py-2 font-semibold flex items-center justify-center ">اسم الاخير</div>
+                <div class="px-2 py-1 col-span-2">
+                    <input type="text" required name="LN"
+                        class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 text-lg placeholder:text-center"
+                        value=" {{Profile.user.last_name}}">
+                </div>
+            </div>
+            <div class="grid grid-cols-3">
+                <div class="px-4 py-2 font-semibold flex items-center justify-center">رقم التواصل</div>
+                <div class="px-2 py-1 col-span-2">
+                    <div class="flex gap-2">
+                        <input type="text" value="{{Profile.user.phone}}" maxlength="9" pattern="[0-9]{9}"
+                            class="w-5/6 bg-main1 shadow-inner p-3 border-none rounded-lg text-lg placeholder:text-center"
+                            name="PH" >
+                        <input type="number" value="{{Profile.user.cp}}" name="CP"
+                            class="w-1/6 bg-main1 border-none shadow-inner p-3 text-lg rounded-lg [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
+
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-3">
+                <div class="px-4 py-2 font-semibold flex items-center justify-center">رقم تواصل اخر</div>
+                <div class="px-2 py-1 col-span-2">
+                    <div class="flex gap-2">
+                        <input type="text" value="{{Profile.homephone}}" maxlength="9" pattern="[0-9]{9}"
+                            class="w-5/6 bg-main1 shadow-inner p-3 border-none rounded-lg text-lg placeholder:text-center"
+                            name="PHH" >
+                        <input type="number" value="{{Profile.cp}}" name="CPH"
+                            class="w-1/6 bg-main1 border-none shadow-inner p-3 text-lg rounded-lg [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-3">
+                <div class="px-4 py-2 font-semibold flex items-center justify-center">الصورة الشخصية</div>
+                <div class="px-2 py-1 col-span-2">
+                    <input
+                        class=" w-full text-lg text-main4-t100 bg-main1 shadow-inner p-3 border-none rounded-lg cursor-pointe focus:outline-none"
+                        type="file" name="pfp">
+                </div>
+            </div>
+            <div class="grid grid-cols-3">
+                <div class="px-4 py-2 font-semibold flex items-center justify-center ">الجنسية</div>
+                <div class="px-2 py-1 col-span-2">
+                    <input type="text" disabled
+                        class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 disabled:text-slate-400 text-lg placeholder:text-center"
+                        value="{{Profile.nationalty}}">
+                </div>
+            </div>
+            <div class="grid grid-cols-3">
+                <div class="px-4 py-2 font-semibold flex items-center justify-center ">البريد الالكتروني</div>
+                <div class="px-2 py-1 col-span-2">
+                    <input type="text" disabled
+                        class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 disabled:text-slate-400 text-lg placeholder:text-center"
+                        value="{{Profile.user.email}}">
+                </div>
+            </div>
+            <div class="flex justify-center col-span-full">
+                <button type="submit" id="buttonS" 
+                    class="w-1/4 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5  my-2 ">حفظ
+                    التعديلات</button>
+            </div>
+            <style>
+                @keyframes moveDots {
+                    0% {
+                        content: '.';
+                    }
+                    25% {
+                        content: '..';
+                    }
+                    50% {
+                        content: '...';
+                    }
+                    75% {
+                        content: '..';
+                    }
+                    100% {
+                        content: '.';
+                    }
+                }
+
+                .loading-dots::after {
+                    content: '.';
+                    animation: moveDots 1s infinite;
+                }
+            </style>
+
+            <script>
+                const button = document.querySelector('#buttonS');
+                const form = document.querySelector('form');
+                form.addEventListener('submit', () => {
+                    button.disabled = true;
+                    button.innerHTML = '<span class="loading-dots"></span> جاري الحفظ';
+                });
+            </script>
+        </div>
+    </form>
+</div>

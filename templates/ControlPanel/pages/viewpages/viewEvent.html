@@ -1,0 +1,50 @@
+{% extends 'ControlPanel\index.html' %}
+{% block main %}
+<div class="bg-white h-full rounded-lg drop-shadow-lg p-4 overflow-auto animate-fade-in">
+    <a href="{% url 'eventManager' %}"
+        class="absolute inline-flex items-center justify-center w-12 h-12 text-xs font-bold text-white bg-blue-500 border-2 border-white rounded-full top-2 end-2 dark:border-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+            <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+        </svg>
+    </a>
+    <div id="editEvent">
+        <h1 class="text-2xl font-bold text-main5 p-2"> معلومات الاحتفاء</h1>
+        <hr class="my-4">
+        <div class="flex justify-center items-center h-1/4 w-full">
+            <div class="h-40 max-w-96 border-2  bg-white rounded-3xl flex justify-center items-center mb-5">
+                {% if e.image %}
+                <img class="h-full w-full rounded-lg bg-black" src="{{e.image.url}}" alt="event profile" />
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 text-sm items-end">
+            <div class="grid grid-cols-2">
+                <div class="px-4 py-2 font-semibold">اسم</div>
+                <div class="px-4 py-2">{{e.name}}</div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="px-4 py-2 font-semibold">البريد الالكتروني.</div>
+                <div class="px-4 py-2">
+                    {{e.time|time:"H:i"}} :: {{e.date|date:"Y/m/d"}}
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="px-4 py-2 font-semibold">حد الاقصى للزوار</div>
+                <div class="px-4 py-2">{{e.maxcap}}</div>
+            </div>
+            <div>
+                <a href="{% url 'editEvent' e.id %}"
+                    class="inline-block border-e p-3 rounded-md drop-shadow-lg text-main1-t bg-main3-t hover:bg-gray-50 hover:text-main5-t focus:relative"
+                    title="Edit">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="h-4 w-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}

@@ -1,0 +1,22 @@
+{% load static %} 
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en" data-theme="dash">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% tailwind_css %}
+  <script src="{% static 'js/htmx.min.js' %}"></script>
+  <title>ControlPanel</title>
+</head>
+
+<body dir="rtl" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' class="flex w-full bg-main1">
+  {% include "ControlPanel/components/sidebar.html" %}
+  <div class="grid grid-cols-1 p-4 bg-main1 w-full h-screen">
+    {% block main %}
+    
+    {% endblock main %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+{% load static %}
+
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en" data-theme="dash">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% tailwind_css %}
+  <script src="{% static 'js/htmx.min.js' %}"></script>
+  <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+  <script src="{% static 'webpush/jsi18n.js' %}"></script>
+  <script id="webpush-js" type="text/javascript" src="{% static 'webpush/webpush.js' %}"></script>
+  <meta name="service-worker-js" content="{% static '/webpush/service-worker.js' %}">
+  <meta name="django-webpush-vapid-key"
+    content="BLXuDiHZy63CUW3nIP3fnuaR3QuHQIsjhOXBJKDnVK3GzOtQa2RJuqCPjyrI8QBs-Gtj9Een0DpvJ16-3CrzL6w">
+  <title>HAFAWA</title>
+</head>
+
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' dir="rtl" class="flex w-full h-screen max-h-screen bg-main1">
+  {% include "MainApp/App/components/sidebar.html" %}
+  <div class="grid grid-cols-1 p-4 bg-main1 w-full h-screen">
+    {% if messages %}
+    {% for m in messages %}
+    <div class="p-4 mb-4 text-sm absolute top-1  text-red-800 rounded-lg bg-red-50">
+            <span class=" font-medium">حدث خطاء !</span> {{m}}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% block main %}
+    <div class="grid grid-cols-2 grid-rows-1 gap-2 h-full rounded-lg p-3 animate-fade-in">
+      <div class="grid grid-cols-1 grid-rows-2 gap-2 rounded-lg drop-shadow-lg">
+        <div class="bg-white h-full row-span-12 rounded-lg drop-shadow-lg p-3">
+          <h1>الطلبات الحالية</h1>
+          <hr class="my-2 rounded-xl" />
+          <div class="max-h-full rounded-lg border border-gray-200">
+            <table class="min-w-full divide-y-2 divide-gray-200 bg-main1-t text-sm">
+              <thead class="bg-main3-t rounded-lg">
+                <tr>
+                  <th class="whitespace-nowrap px-4 py-2 font-medium text-main1-t">
+                    الطلبات
+                  </th>
+                  <th class="whitespace-nowrap px-4 py-2 font-medium text-main1-t">
+                    حالة الطلب
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody class="divide-y divide-gray-200">
+                {% for rs in R %}
+                <tr>
+                  <td hx-get="{% url 'viewReq' rs.id %}" hx-target="#viewReq" hx-swap="innerHTML"
+                    class="cursor-pointer whitespace-nowrap px-4 py-2 font-bold text-main4">
+                    طلب حضور - {{rs.event.name}}
+                  </td>
+                  {% if rs.isApproved == -1 %}
+                  <td class="whitespace-nowrap p-4 text-gray-700">
+                    <span class="p-2 bg-blue-500 rounded-xl">قيدالمراجعة</span>
+                  </td>
+                  {% elif rs.isApproved == 0 %}
+                  <td class="whitespace-nowrap p-4 text-gray-700">
+                    <span class="p-2 bg-red-500 rounded-xl">مرفوض</span>
+                  </td>
+                  {% elif rs.isApproved == 1 %}
+                  <td class="whitespace-nowrap p-4 text-gray-700">
+                    <span class="p-2 bg-green-500 rounded-xl">مقبول</span>
+                  </td>
+                  {% endif %}
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="viewReq" class="overflow-y-auto bg-white h-full transition-all  rounded-lg drop-shadow-lg p-3">
+        </div>
+      </div>
+      <div class="max-h-1/2 bg-white rounded-lg drop-shadow-lg px-4 py-4">
+        <h1>مواعيد الاحتفاءات</h1>
+        <hr class="my-2 rounded-xl" />
+        <div class="overflow-y-auto">
+          <div class="grid grid-cols-1 gap-2 ">
+            {% for e in E %}
+            <div class="overflow-hidden  flex flex-col bg-main1 rounded-lg animate-fade-in animation-delay-300 ">
+              <a href="{% url 'order' %}" class="rounded-lg p-4 shadow-sm shadow-indigo-100 max-h-52">
+                {% if e.image %}
+                <img alt="" src="{{e.image.url}}" class="h-32 w-full rounded-md object-cover" />
+                {% endif %}
+                <div class="flex justify-between pt-2">
+                  <dl>
+                    <div>
+                      <dt class="sr-only">date</dt>
+                      <dd class="text-sm text-gray-500">{{e.date | date:"Y /n /j"}} | {{e.time|time:"H:i"}}</dd>
+                    </div>
+
+                    <div>
+                      <dt class="sr-only"></dt>
+                      <dd class="font-medium">{{e.name}}</dd>
+                    </div>
+                  </dl>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock main %}
+  </div>
+</body>
+
+</html>
