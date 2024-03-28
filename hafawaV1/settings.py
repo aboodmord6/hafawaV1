@@ -15,7 +15,7 @@ WEBPUSH_SETTINGS = {
     "VAPID_ADMIN_EMAIL": "aboodmord7@gmail.com",
 }
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 PWA_APP_DEBUG_MODE = False
@@ -222,7 +222,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_htmx",
-    "whitenoise",
     # "storages",
     "django_user_agents",
     "webpush",
@@ -239,7 +238,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -300,16 +298,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-STORAGES = {
-    "default": {
-        "ENGINE": "django.core.files.storage.FileSystemStorage",
-        "OPTIONS": {
-        },
-    },
-    "staticfiles": {
-        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
-    },
-}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
@@ -322,14 +311,14 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = "static/"
+STATIC_URL = "/root/staticfiles/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
-MEDIA_URL = "media/"
-MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = "/root/media/"
+MEDIA_ROOT = "/root/media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 TAILWIND_APP_NAME = "cssFramework"
-NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+NPM_BIN_PATH = "npm"
 LOGIN_URL = "login"
 USER_AGENTS_CACHE = "default"
 PWA_SERVICE_WORKER_PATH = BASE_DIR / "static/js/sw.js"
