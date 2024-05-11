@@ -1,9 +1,9 @@
 {% load static %}
 {% load pwa %}
+{% load i18n %}
 {% load static tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en" data-theme="dash">
-
+<html data-theme="dash">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,19 +12,18 @@
     <script src="{% static 'js/htmx.min.js' %}"></script>
     <title>Main</title>
 </head>
-
-
-<body dir="rtl" class="bg-main1 h-screen overflow-hidden flex justify-center items-center">
+<body dir="{% trans 'rtl' %}" class="bg-main1 h-screen overflow-hidden flex justify-center items-center">
     {% if messages %}
     {% for m in messages %}
     <div class="p-4 mb-4 text-sm absolute top-1  text-red-800 rounded-lg bg-red-50">
-            <span class=" font-medium">حدث خطاء !</span> {{m}}
+        <span class=" font-medium">{% trans "حدث خطاء !" %} </span> {{m}}
     </div>
     {% endfor %}
     {% endif %}
     {% block main %}
-    
-    <div class="flex justify-center items-center flex-col overflow-hidden bg-white shadow-lg p-8 rounded-lg w-1/3 max-mobile:w-full max-mobile:h-screen">
+
+    <div
+        class="flex justify-center items-center flex-col overflow-hidden bg-white shadow-lg p-8 rounded-lg w-1/3 max-mobile:w-full max-mobile:h-screen">
         <div class="flex w-full max-w-48 bg-white rounded-lg h-20 justify-center items-center">
             <img src="{% static 'icons/nameF.svg' %}" height="72px" width="96px" />
             <hr class="h-16 w-[2px] mx-1" />
@@ -33,7 +32,9 @@
         <form class="w-full" action="{% url 'login' %}" method="POST">
             {% csrf_token %}
             <div>
-                <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">البريد الالكتروني</label>
+                <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">
+                   {% trans "البريد الالكتروني" %}
+                </label>
                 <div class="mt-2">
                     <input id="phone" name="phone" type="email" required
                         class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 text-lg" />
@@ -42,11 +43,11 @@
 
             <div>
                 <div class="flex items-center justify-between">
-                    <label for="password" class="block text-sm font-medium leading-6 text-gray-900"> كلمة المرور
+                    <label for="password" class="block text-sm font-medium leading-6 text-gray-900">{% trans "كلمة المرور" %}
                     </label>
                 </div>
                 <div class="mt-2">
-                    <input id="password" name="password" type="password"  autocomplete="current-password" required
+                    <input id="password" name="password" type="password" autocomplete="current-password" required
                         class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 text-lg" />
                 </div>
             </div>
@@ -54,13 +55,26 @@
             <div class="my-2">
                 <button type="submit"
                     class="flex w-full justify-center rounded-md bg-main3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-main3-t focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-main4">
-                    تسجيل الدخول
+                    {% trans "تسجيل الدخول" %}
                 </button>
             </div>
         </form>
         <div>
-            <a class="hover:text-main2" href="{% url 'register' %}">تسجيل جديد</a>
+            <a class="hover:text-main2" href="{% url 'register' %}">{% trans "تسجيل جديد" %}</a>
         </div>
+	<form action="{% url 'set_language' %}" method="post" style="display: flex; gap: 4px; margin-top: 8px;">{% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select onchange="this.form.submit()"  name="language" style="border: none; border-radius: 5px; width: 100%;">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
     </div>
     {% endblock %}
 </body>

@@ -1,14 +1,15 @@
 {% extends "MainApp/mobile/index.html" %}
+{% load i18n %}
 {% block main %}
 
-<h1 class="text-main5 py-4 px-8 mt-4 text-2xl font-bold ">تعديل على المعلومات الشخصية</h1>
+<h1 class="text-main5 py-4 px-8 mt-4 text-2xl font-bold ">{% trans "تعديل على المعلومات الشخصية" %}</h1>
 
 <div class="bg-gradient-to-b from-main1-t text-main5-t flex p-6 mx-2 rounded-lg">
     <form action="{% url 'updateProfile' Profile.user.id %}" method="post" enctype="multipart/form-data" class="h-full">
         {% csrf_token %}
         <div class="grid md:grid-cols-2 text-sm items-end">
             <div class="grid md:grid-cols-3 ">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl">اسم الاول</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl">{% trans "اسم الاول" %}</div>
                 <div class="px-2 py-1 md:col-span-2">
                     <input type="text" required name="FN"
                         class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 text-lg placeholder:text-center"
@@ -16,7 +17,7 @@
                 </div>
             </div>
             <div class="grid md:grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl">اسم الاخير</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl">{% trans "اسم الاخير" %}</div>
                 <div class="px-2 py-1 md:col-span-2">
                     <input type="text" required name="LN"
                         class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 text-lg placeholder:text-center"
@@ -24,7 +25,7 @@
                 </div>
             </div>
             <div class="grid md:grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl">رقم التواصل</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl">{% trans "رقم التواصل" %}</div>
                 <div class="px-2 py-1 md:col-span-2">
                     <div class="flex gap-2">
                         <input type="text" value="{{Profile.user.phone}}" maxlength="9"
@@ -36,7 +37,7 @@
                 </div>
             </div>
             <div class="grid md:grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl">رقم تواصل اخر</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl">{% trans "رقم تواصل اخر" %}</div>
                 <div class="px-2 py-1 md:col-span-2">
                     <div class="flex gap-2">
                         <input type="text" value="{{Profile.homephone}}" maxlength="9"
@@ -48,15 +49,15 @@
                 </div>
             </div>
             <div class="grid md:grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl">الصورة الشخصية</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl">{% trans "الصورة الشخصية" %}</div>
                 <div class="px-2 py-1 md:col-span-2">
-                    <input
+                    <input disabled
                         class=" w-full text-lg text-main4-t100 bg-main1 shadow-inner p-3 border-none rounded-lg cursor-pointe focus:outline-none"
                         type="file" accept="image/*" name="pfp">
                 </div>
             </div>
             <div class="grid md:grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl">الجنسية</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl">{% trans "الجنسية" %}</div>
                 <div class="px-2 py-1 md:col-span-2">
                     <input type="text" disabled
                         class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 disabled:text-slate-400 text-lg placeholder:text-center"
@@ -65,7 +66,7 @@
             </div>
             
             <div class="grid md:grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl  ">البريد الالكتروني</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center text-xl  ">{% trans "البريد الالكتروني" %}</div>
                 <div class="px-2 py-1 md:col-span-2">
                     <input type="text" disabled
                         class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 disabled:text-slate-400 text-lg placeholder:text-center"
@@ -74,15 +75,14 @@
             </div>
             <div class="flex justify-center col-span-full">
                 <button type="submit" id="buttonS"
-                    class="w-1/4 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5  my-2 ">حفظ
-                    التعديلات</button>
+                    class=" focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5  my-2 ">{% trans "حفظ التعديلات" %}</button>
             </div>
             <script>
                 const button = document.querySelector('#buttonS');
                     const form = document.querySelector('form');
                     form.addEventListener('submit', () => {
                         button.disabled = true;
-                        button.textContent = 'جاري الحفظ...';
+                        button.textContent = '{% trans "جاري الحفظ..." %}';
                     });
             </script>
         </div>

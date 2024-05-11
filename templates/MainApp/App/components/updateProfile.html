@@ -1,9 +1,10 @@
+{% load i18n %}
 <div class="text-gray-700 flex ">
     <form action="{% url 'updateProfile' Profile.user.id %}" method="post" enctype="multipart/form-data" class="h-full">
         {% csrf_token %}
         <div class="grid md:grid-cols-2 text-sm items-end">
             <div class="grid grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center ">اسم الاول</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center ">{% trans "اسم الاول" %}</div>
                 <div class="px-2 py-1 col-span-2">
                     <input type="text" required name="FN"
                         class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 text-lg placeholder:text-center"
@@ -11,7 +12,7 @@
                 </div>
             </div>
             <div class="grid grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center ">اسم الاخير</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center ">{% trans "اسم الاخير" %}</div>
                 <div class="px-2 py-1 col-span-2">
                     <input type="text" required name="LN"
                         class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 text-lg placeholder:text-center"
@@ -19,7 +20,7 @@
                 </div>
             </div>
             <div class="grid grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center">رقم التواصل</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center">{% trans "رقم التواصل" %}</div>
                 <div class="px-2 py-1 col-span-2">
                     <div class="flex gap-2">
                         <input type="text" value="{{Profile.user.phone}}" maxlength="9" pattern="[0-9]{9}"
@@ -32,7 +33,7 @@
                 </div>
             </div>
             <div class="grid grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center">رقم تواصل اخر</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center">{% trans "رقم تواصل اخر" %}</div>
                 <div class="px-2 py-1 col-span-2">
                     <div class="flex gap-2">
                         <input type="text" value="{{Profile.homephone}}" maxlength="9" pattern="[0-9]{9}"
@@ -44,15 +45,15 @@
                 </div>
             </div>
             <div class="grid grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center">الصورة الشخصية</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center">{% trans "الصورة الشخصية" %}</div>
                 <div class="px-2 py-1 col-span-2">
-                    <input
+                    <input disabled
                         class=" w-full text-lg text-main4-t100 bg-main1 shadow-inner p-3 border-none rounded-lg cursor-pointe focus:outline-none"
                         type="file" name="pfp">
                 </div>
             </div>
             <div class="grid grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center ">الجنسية</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center ">{% trans "الجنسية" %}</div>
                 <div class="px-2 py-1 col-span-2">
                     <input type="text" disabled
                         class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 disabled:text-slate-400 text-lg placeholder:text-center"
@@ -60,7 +61,7 @@
                 </div>
             </div>
             <div class="grid grid-cols-3">
-                <div class="px-4 py-2 font-semibold flex items-center justify-center ">البريد الالكتروني</div>
+                <div class="px-4 py-2 font-semibold flex items-center justify-center ">{% trans "البريد الالكتروني" %}</div>
                 <div class="px-2 py-1 col-span-2">
                     <input type="text" disabled
                         class="w-full rounded-lg border-none bg-main1 shadow-inner p-3 disabled:text-slate-400 text-lg placeholder:text-center"
@@ -69,8 +70,7 @@
             </div>
             <div class="flex justify-center col-span-full">
                 <button type="submit" id="buttonS" 
-                    class="w-1/4 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5  my-2 ">حفظ
-                    التعديلات</button>
+                    class="w-1/4 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5  my-2 ">{% trans "حفظ التعديلات" %}</button>
             </div>
             <style>
                 @keyframes moveDots {
@@ -102,7 +102,7 @@
                 const form = document.querySelector('form');
                 form.addEventListener('submit', () => {
                     button.disabled = true;
-                    button.innerHTML = '<span class="loading-dots"></span> جاري الحفظ';
+                    button.innerHTML = '<span class="loading-dots"></span> {% trans "جاري الحفظ" %}';
                 });
             </script>
         </div>

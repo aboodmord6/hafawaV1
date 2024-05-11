@@ -1,0 +1,1511 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Untitled project\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-29 19:36+0300\n"
+"PO-Revision-Date: 2024-04-27 17:21+0300\n"
+"Last-Translator: Abdullah Zein\n"
+"Language-Team: English (USA)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en-US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Loco https://localise.biz\n"
+"X-Loco-Source-Locale: ar-JO\n"
+"X-Loco-Project-Id: 157734\n"
+"X-Loco-Api-Version: 1.0.28 20240329-1\n"
+
+#: .\templates\MainApp\App\components\sidebar.html:31
+#: .\templates\MainApp\mobile\index.html:51
+#: .\templates\MainApp\mobile\pages\profile.html:46
+msgid "الصفحة الرئيسية"
+msgstr "home page"
+
+#: .\templates\MainApp\App\components\sidebar.html:57
+#: .\templates\MainApp\App\index.html:42
+#: .\templates\MainApp\mobile\components\bottomNav.html:9
+#: .\templates\MainApp\mobile\index.html:65
+#: .\templates\MainApp\mobile\pages\orders.html:15
+#: .\templates\MainApp\mobile\pages\profile.html:52
+msgid "الطلبات"
+msgstr "orders"
+
+#: .\templates\MainApp\App\components\sidebar.html:79
+#: .\templates\MainApp\mobile\pages\profile.html:7
+msgid "الحساب الشخصي"
+msgstr "personal account"
+
+#: .\templates\MainApp\App\components\sidebar.html:106
+#: .\templates\MainApp\mobile\pages\profile.html:84
+msgid "تسجيل الخروج"
+msgstr "Logout"
+
+#: .\templates\MainApp\App\components\updateProfile.html:7
+#: .\templates\MainApp\mobile\pages\updateProfile.html:12
+msgid "اسم الاول"
+msgstr "first name"
+
+#: .\templates\MainApp\App\components\updateProfile.html:15
+#: .\templates\MainApp\mobile\pages\updateProfile.html:20
+msgid "اسم الاخير"
+msgstr "last name"
+
+#: .\templates\MainApp\App\components\updateProfile.html:23
+#: .\templates\MainApp\App\pages\profile.html:32
+#: .\templates\MainApp\mobile\pages\profile.html:25
+#: .\templates\MainApp\mobile\pages\updateProfile.html:28
+msgid "رقم التواصل"
+msgstr "contact number"
+
+#: .\templates\MainApp\App\components\updateProfile.html:36
+#: .\templates\MainApp\mobile\pages\updateProfile.html:40
+msgid "رقم تواصل اخر"
+msgstr "another contact number"
+
+#: .\templates\MainApp\App\components\updateProfile.html:48
+#: .\templates\MainApp\mobile\pages\updateProfile.html:52
+msgid "الصورة الشخصية"
+msgstr "personal photo"
+
+#: .\templates\MainApp\App\components\updateProfile.html:56
+#: .\templates\MainApp\App\pages\profile.html:41
+#: .\templates\MainApp\mobile\pages\profile.html:34
+#: .\templates\MainApp\mobile\pages\updateProfile.html:60
+msgid "الجنسية"
+msgstr "nationality"
+
+#: .\templates\MainApp\App\components\updateProfile.html:64
+#: .\templates\MainApp\App\pages\profile.html:26
+#: .\templates\MainApp\mobile\pages\profile.html:19
+#: .\templates\MainApp\mobile\pages\updateProfile.html:69
+#: .\templates\auth\login.html:36 .\templates\auth\registration.html:228
+msgid "البريد الالكتروني"
+msgstr "email"
+
+#: .\templates\MainApp\App\components\updateProfile.html:73
+#: .\templates\MainApp\mobile\pages\updateProfile.html:78
+msgid "حفظ التعديلات"
+msgstr "Save adjustments"
+
+#: .\templates\MainApp\App\components\updateProfile.html:105
+msgid "جاري الحفظ"
+msgstr "Saving"
+
+#: .\templates\MainApp\App\index.html:21
+#: .\templates\MainApp\mobile\index.html:20 .\templates\auth\login.html:15
+msgid "rtl"
+msgstr "ltr"
+
+#: .\templates\MainApp\App\index.html:27
+#: .\templates\MainApp\mobile\index.html:42 .\templates\auth\login.html:19
+msgid "حدث خطاء !"
+msgstr "something went wrong!"
+
+#: .\templates\MainApp\App\index.html:35
+#: .\templates\MainApp\mobile\index.html:59
+#: .\templates\MainApp\mobile\pages\orders.html:5
+msgid "الطلبات الحالية"
+msgstr "current orders"
+
+#: .\templates\MainApp\App\index.html:45
+#: .\templates\MainApp\App\pages\orders.html:260
+#: .\templates\MainApp\App\pages\viewReq.html:18
+#: .\templates\MainApp\mobile\pages\viewreq.html:12
+msgid "حالة الطلب"
+msgstr "order status"
+
+#: .\templates\MainApp\App\index.html:55
+#: .\templates\MainApp\mobile\index.html:75
+msgid "طلب حضور -"
+msgstr "request to attend -"
+
+#: .\templates\MainApp\App\index.html:59
+#: .\templates\MainApp\App\pages\orders.html:274
+#: .\templates\MainApp\mobile\index.html:77
+#: .\templates\MainApp\mobile\pages\orders.html:33
+msgid "قيدالمراجعة"
+msgstr "under review"
+
+#: .\templates\MainApp\App\index.html:63
+#: .\templates\MainApp\App\pages\orders.html:278
+#: .\templates\MainApp\App\pages\viewReq.html:22
+#: .\templates\MainApp\mobile\index.html:79
+#: .\templates\MainApp\mobile\pages\orders.html:38
+#: .\templates\MainApp\mobile\pages\viewreq.html:16
+msgid "مرفوض"
+msgstr "rejected"
+
+#: .\templates\MainApp\App\index.html:67
+#: .\templates\MainApp\App\pages\orders.html:282
+#: .\templates\MainApp\App\pages\viewReq.html:24
+#: .\templates\MainApp\mobile\index.html:81
+#: .\templates\MainApp\mobile\pages\orders.html:42
+#: .\templates\MainApp\mobile\pages\viewreq.html:18
+msgid "مقبول"
+msgstr "acceptable"
+
+#: .\templates\MainApp\App\index.html:80
+#: .\templates\MainApp\mobile\index.html:88
+msgid "مواعيد الاحتفاءات"
+msgstr "dates of celebrations"
+
+#: .\templates\MainApp\App\pages\orders.html:12
+#: .\templates\MainApp\App\pages\viewReq.html:35
+#: .\templates\MainApp\mobile\pages\orders.html:130
+#: .\templates\MainApp\mobile\pages\viewreq.html:34
+msgid "اسم الفندق"
+msgstr "hotel name"
+
+#: .\templates\MainApp\App\pages\orders.html:17
+#: .\templates\MainApp\App\pages\viewReq.html:41
+#: .\templates\MainApp\mobile\pages\orders.html:140
+#: .\templates\MainApp\mobile\pages\viewreq.html:38
+msgid "عنوان الفندق"
+msgstr "hotel address"
+
+#: .\templates\MainApp\App\pages\orders.html:22
+#: .\templates\MainApp\App\pages\viewReq.html:46
+#: .\templates\MainApp\mobile\pages\orders.html:150
+#: .\templates\MainApp\mobile\pages\viewreq.html:22
+msgid "عدد الزوار"
+msgstr "number of visitors"
+
+#: .\templates\MainApp\App\pages\orders.html:27
+#: .\templates\MainApp\App\pages\viewReq.html:51
+#: .\templates\MainApp\mobile\pages\orders.html:161
+#: .\templates\MainApp\mobile\pages\viewreq.html:26
+msgid "جنسية الزوار"
+msgstr "nationality of visitors"
+
+#: .\templates\MainApp\App\pages\orders.html:28
+#: .\templates\MainApp\mobile\pages\orders.html:162
+#: .\templates\auth\registration.html:28
+msgid "أفغانستان"
+msgstr "afghanistan"
+
+#: .\templates\MainApp\App\pages\orders.html:29
+#: .\templates\MainApp\mobile\pages\orders.html:163
+#: .\templates\auth\registration.html:29
+msgid "ألبانيا"
+msgstr "albania"
+
+#: .\templates\MainApp\App\pages\orders.html:30
+#: .\templates\MainApp\mobile\pages\orders.html:164
+#: .\templates\auth\registration.html:30
+msgid "الجزائر"
+msgstr "algeria"
+
+#: .\templates\MainApp\App\pages\orders.html:31
+#: .\templates\MainApp\mobile\pages\orders.html:165
+#: .\templates\auth\registration.html:31
+msgid "أندورا"
+msgstr "andorra"
+
+#: .\templates\MainApp\App\pages\orders.html:32
+#: .\templates\MainApp\mobile\pages\orders.html:166
+#: .\templates\auth\registration.html:32
+msgid "أنغولا"
+msgstr "angola"
+
+#: .\templates\MainApp\App\pages\orders.html:33
+#: .\templates\MainApp\mobile\pages\orders.html:167
+#: .\templates\auth\registration.html:33
+msgid "أنتيغوا وباربودا"
+msgstr "antigua and Barbuda"
+
+#: .\templates\MainApp\App\pages\orders.html:34
+#: .\templates\MainApp\mobile\pages\orders.html:168
+#: .\templates\auth\registration.html:34
+msgid "الأرجنتين"
+msgstr "argentina"
+
+#: .\templates\MainApp\App\pages\orders.html:35
+#: .\templates\MainApp\mobile\pages\orders.html:169
+#: .\templates\auth\registration.html:35
+msgid "أرمينيا"
+msgstr "armenia"
+
+#: .\templates\MainApp\App\pages\orders.html:36
+#: .\templates\MainApp\mobile\pages\orders.html:170
+#: .\templates\auth\registration.html:36
+msgid "أستراليا"
+msgstr "australia"
+
+#: .\templates\MainApp\App\pages\orders.html:37
+#: .\templates\MainApp\mobile\pages\orders.html:171
+#: .\templates\auth\registration.html:37
+msgid "النمسا"
+msgstr "austria"
+
+#: .\templates\MainApp\App\pages\orders.html:38
+#: .\templates\MainApp\mobile\pages\orders.html:172
+#: .\templates\auth\registration.html:38
+msgid "أذربيجان"
+msgstr "azerbaijan"
+
+#: .\templates\MainApp\App\pages\orders.html:39
+#: .\templates\MainApp\mobile\pages\orders.html:173
+#: .\templates\auth\registration.html:39
+msgid "البهاما"
+msgstr "bahamas"
+
+#: .\templates\MainApp\App\pages\orders.html:40
+#: .\templates\MainApp\mobile\pages\orders.html:174
+#: .\templates\auth\registration.html:40
+msgid "البحرين"
+msgstr "bahrain"
+
+#: .\templates\MainApp\App\pages\orders.html:41
+#: .\templates\MainApp\mobile\pages\orders.html:175
+#: .\templates\auth\registration.html:41
+msgid "بنغلاديش"
+msgstr "bangladesh"
+
+#: .\templates\MainApp\App\pages\orders.html:42
+#: .\templates\MainApp\mobile\pages\orders.html:176
+#: .\templates\auth\registration.html:42
+msgid "باربادوس"
+msgstr "barbados"
+
+#: .\templates\MainApp\App\pages\orders.html:43
+#: .\templates\MainApp\mobile\pages\orders.html:177
+#: .\templates\auth\registration.html:43
+msgid "بيلاروسيا"
+msgstr "belarus"
+
+#: .\templates\MainApp\App\pages\orders.html:44
+#: .\templates\MainApp\mobile\pages\orders.html:178
+#: .\templates\auth\registration.html:44
+msgid "بلجيكا"
+msgstr "belgium"
+
+#: .\templates\MainApp\App\pages\orders.html:45
+#: .\templates\MainApp\mobile\pages\orders.html:179
+#: .\templates\auth\registration.html:45
+msgid "بليز"
+msgstr "belize"
+
+#: .\templates\MainApp\App\pages\orders.html:46
+#: .\templates\MainApp\mobile\pages\orders.html:180
+#: .\templates\auth\registration.html:46
+msgid "بنين"
+msgstr "benin"
+
+#: .\templates\MainApp\App\pages\orders.html:47
+#: .\templates\MainApp\mobile\pages\orders.html:181
+#: .\templates\auth\registration.html:47
+msgid "بوتان"
+msgstr "bhutan"
+
+#: .\templates\MainApp\App\pages\orders.html:48
+#: .\templates\MainApp\mobile\pages\orders.html:182
+#: .\templates\auth\registration.html:48
+msgid "بوليفيا"
+msgstr "bolivia"
+
+#: .\templates\MainApp\App\pages\orders.html:49
+#: .\templates\MainApp\mobile\pages\orders.html:183
+#: .\templates\auth\registration.html:49
+msgid "البوسنة والهرسك"
+msgstr "bosnia and Herzegovina"
+
+#: .\templates\MainApp\App\pages\orders.html:50
+#: .\templates\MainApp\mobile\pages\orders.html:184
+#: .\templates\auth\registration.html:50
+msgid "بوتسوانا"
+msgstr "botswana"
+
+#: .\templates\MainApp\App\pages\orders.html:51
+#: .\templates\MainApp\mobile\pages\orders.html:185
+#: .\templates\auth\registration.html:51
+msgid "البرازيل"
+msgstr "brazil"
+
+#: .\templates\MainApp\App\pages\orders.html:52
+#: .\templates\MainApp\mobile\pages\orders.html:186
+#: .\templates\auth\registration.html:52
+msgid "بروناي"
+msgstr "brunei"
+
+#: .\templates\MainApp\App\pages\orders.html:53
+#: .\templates\MainApp\mobile\pages\orders.html:187
+#: .\templates\auth\registration.html:53
+msgid "بلغاريا"
+msgstr "bulgaria"
+
+#: .\templates\MainApp\App\pages\orders.html:54
+#: .\templates\MainApp\mobile\pages\orders.html:188
+#: .\templates\auth\registration.html:54
+msgid "بوركينا فاسو"
+msgstr "burkina Faso"
+
+#: .\templates\MainApp\App\pages\orders.html:55
+#: .\templates\MainApp\mobile\pages\orders.html:189
+#: .\templates\auth\registration.html:55
+msgid "بوروندي"
+msgstr "burundi"
+
+#: .\templates\MainApp\App\pages\orders.html:56
+#: .\templates\MainApp\mobile\pages\orders.html:190
+#: .\templates\auth\registration.html:56
+msgid "كمبوديا"
+msgstr "cambodia"
+
+#: .\templates\MainApp\App\pages\orders.html:57
+#: .\templates\MainApp\mobile\pages\orders.html:191
+#: .\templates\auth\registration.html:57
+msgid "الكاميرون"
+msgstr "cameroon"
+
+#: .\templates\MainApp\App\pages\orders.html:58
+#: .\templates\MainApp\mobile\pages\orders.html:192
+#: .\templates\auth\registration.html:58
+msgid "كندا"
+msgstr "canada"
+
+#: .\templates\MainApp\App\pages\orders.html:59
+#: .\templates\MainApp\mobile\pages\orders.html:193
+#: .\templates\auth\registration.html:59
+msgid "الرأس الأخضر"
+msgstr "cape Verde"
+
+#: .\templates\MainApp\App\pages\orders.html:60
+#: .\templates\MainApp\mobile\pages\orders.html:194
+#: .\templates\auth\registration.html:60
+msgid "جمهورية أفريقيا الوسطى"
+msgstr "central African Republic"
+
+#: .\templates\MainApp\App\pages\orders.html:61
+#: .\templates\MainApp\mobile\pages\orders.html:195
+#: .\templates\auth\registration.html:61
+msgid "تشاد"
+msgstr "chad"
+
+#: .\templates\MainApp\App\pages\orders.html:62
+#: .\templates\MainApp\mobile\pages\orders.html:196
+#: .\templates\auth\registration.html:62
+msgid "تشيلي"
+msgstr "chile"
+
+#: .\templates\MainApp\App\pages\orders.html:63
+#: .\templates\MainApp\mobile\pages\orders.html:197
+#: .\templates\auth\registration.html:63
+msgid "الصين"
+msgstr "china"
+
+#: .\templates\MainApp\App\pages\orders.html:64
+#: .\templates\MainApp\mobile\pages\orders.html:198
+#: .\templates\auth\registration.html:64
+msgid "كولومبيا"
+msgstr "colombia"
+
+#: .\templates\MainApp\App\pages\orders.html:65
+#: .\templates\MainApp\mobile\pages\orders.html:199
+#: .\templates\auth\registration.html:65
+msgid "جزر القمر"
+msgstr "comoros"
+
+#: .\templates\MainApp\App\pages\orders.html:66
+#: .\templates\MainApp\mobile\pages\orders.html:200
+#: .\templates\auth\registration.html:66
+msgid "كوستاريكا"
+msgstr "costa Rica"
+
+#: .\templates\MainApp\App\pages\orders.html:67
+#: .\templates\MainApp\mobile\pages\orders.html:201
+#: .\templates\auth\registration.html:67
+msgid "ساحل العاج"
+msgstr "ivory Coast"
+
+#: .\templates\MainApp\App\pages\orders.html:68
+#: .\templates\MainApp\mobile\pages\orders.html:202
+#: .\templates\auth\registration.html:68
+msgid "كرواتيا"
+msgstr "croatia"
+
+#: .\templates\MainApp\App\pages\orders.html:69
+#: .\templates\MainApp\mobile\pages\orders.html:203
+#: .\templates\auth\registration.html:69
+msgid "كوبا"
+msgstr "cuba"
+
+#: .\templates\MainApp\App\pages\orders.html:70
+#: .\templates\MainApp\mobile\pages\orders.html:204
+#: .\templates\auth\registration.html:70
+msgid "قبرص"
+msgstr "cyprus"
+
+#: .\templates\MainApp\App\pages\orders.html:71
+#: .\templates\MainApp\mobile\pages\orders.html:205
+#: .\templates\auth\registration.html:71
+msgid "التشيك"
+msgstr "czech"
+
+#: .\templates\MainApp\App\pages\orders.html:72
+#: .\templates\MainApp\mobile\pages\orders.html:206
+#: .\templates\auth\registration.html:72
+msgid "جمهورية الكونغو الديمقراطية"
+msgstr "democratic Republic of Congo"
+
+#: .\templates\MainApp\App\pages\orders.html:73
+#: .\templates\MainApp\mobile\pages\orders.html:207
+#: .\templates\auth\registration.html:73
+msgid "الدنمارك"
+msgstr "denmark"
+
+#: .\templates\MainApp\App\pages\orders.html:74
+#: .\templates\MainApp\mobile\pages\orders.html:208
+#: .\templates\auth\registration.html:74
+msgid "جيبوتي"
+msgstr "djibouti"
+
+#: .\templates\MainApp\App\pages\orders.html:75
+#: .\templates\MainApp\mobile\pages\orders.html:209
+#: .\templates\auth\registration.html:75
+msgid "دومينيكا"
+msgstr "dominica"
+
+#: .\templates\MainApp\App\pages\orders.html:76
+#: .\templates\MainApp\mobile\pages\orders.html:210
+#: .\templates\auth\registration.html:76
+msgid "جمهورية الدومينيكان"
+msgstr "dominican Republic"
+
+#: .\templates\MainApp\App\pages\orders.html:77
+#: .\templates\MainApp\mobile\pages\orders.html:211
+#: .\templates\auth\registration.html:77
+msgid "تيمور الشرقية"
+msgstr "east Timor"
+
+#: .\templates\MainApp\App\pages\orders.html:78
+#: .\templates\MainApp\mobile\pages\orders.html:212
+#: .\templates\auth\registration.html:78
+msgid "الإكوادور"
+msgstr "ecuador"
+
+#: .\templates\MainApp\App\pages\orders.html:79
+#: .\templates\MainApp\mobile\pages\orders.html:213
+#: .\templates\auth\registration.html:79
+msgid "مصر"
+msgstr "egypt"
+
+#: .\templates\MainApp\App\pages\orders.html:80
+#: .\templates\MainApp\mobile\pages\orders.html:214
+#: .\templates\auth\registration.html:80
+msgid "السلفادور"
+msgstr "el Salvador"
+
+#: .\templates\MainApp\App\pages\orders.html:81
+#: .\templates\MainApp\mobile\pages\orders.html:215
+#: .\templates\auth\registration.html:81
+msgid "غينيا الاستوائية"
+msgstr "equatorial Guinea"
+
+#: .\templates\MainApp\App\pages\orders.html:82
+#: .\templates\MainApp\mobile\pages\orders.html:216
+#: .\templates\auth\registration.html:82
+msgid "إريتريا"
+msgstr "eritrea"
+
+#: .\templates\MainApp\App\pages\orders.html:83
+#: .\templates\MainApp\mobile\pages\orders.html:217
+#: .\templates\auth\registration.html:83
+msgid "إستونيا"
+msgstr "estonia"
+
+#: .\templates\MainApp\App\pages\orders.html:84
+#: .\templates\MainApp\mobile\pages\orders.html:218
+#: .\templates\auth\registration.html:84
+msgid "إثيوبيا"
+msgstr "ethiopia"
+
+#: .\templates\MainApp\App\pages\orders.html:85
+#: .\templates\MainApp\mobile\pages\orders.html:219
+#: .\templates\auth\registration.html:85
+msgid "فيجي"
+msgstr "fiji"
+
+#: .\templates\MainApp\App\pages\orders.html:86
+#: .\templates\MainApp\mobile\pages\orders.html:220
+#: .\templates\auth\registration.html:86
+msgid "فنلندا"
+msgstr "finland"
+
+#: .\templates\MainApp\App\pages\orders.html:87
+#: .\templates\MainApp\mobile\pages\orders.html:221
+#: .\templates\auth\registration.html:87
+msgid "فرنسا"
+msgstr "france"
+
+#: .\templates\MainApp\App\pages\orders.html:88
+#: .\templates\MainApp\mobile\pages\orders.html:222
+#: .\templates\auth\registration.html:88
+msgid "الغابون"
+msgstr "gabon"
+
+#: .\templates\MainApp\App\pages\orders.html:89
+#: .\templates\MainApp\mobile\pages\orders.html:223
+#: .\templates\auth\registration.html:89
+msgid "غامبيا"
+msgstr "gambia"
+
+#: .\templates\MainApp\App\pages\orders.html:90
+#: .\templates\MainApp\mobile\pages\orders.html:224
+#: .\templates\auth\registration.html:90
+msgid "جورجيا"
+msgstr "georgia"
+
+#: .\templates\MainApp\App\pages\orders.html:91
+#: .\templates\MainApp\mobile\pages\orders.html:225
+#: .\templates\auth\registration.html:91
+msgid "ألمانيا"
+msgstr "germany"
+
+#: .\templates\MainApp\App\pages\orders.html:92
+#: .\templates\MainApp\mobile\pages\orders.html:226
+#: .\templates\auth\registration.html:92
+msgid "غانا"
+msgstr "ghana"
+
+#: .\templates\MainApp\App\pages\orders.html:93
+#: .\templates\MainApp\mobile\pages\orders.html:227
+#: .\templates\auth\registration.html:93
+msgid "اليونان"
+msgstr "greece"
+
+#: .\templates\MainApp\App\pages\orders.html:94
+#: .\templates\MainApp\mobile\pages\orders.html:228
+#: .\templates\auth\registration.html:94
+msgid "جرينادا"
+msgstr "grenada"
+
+#: .\templates\MainApp\App\pages\orders.html:95
+#: .\templates\MainApp\mobile\pages\orders.html:229
+#: .\templates\auth\registration.html:95
+msgid "غواتيمالا"
+msgstr "guatemala"
+
+#: .\templates\MainApp\App\pages\orders.html:96
+#: .\templates\MainApp\mobile\pages\orders.html:230
+#: .\templates\auth\registration.html:96
+msgid "غينيا"
+msgstr "guinea"
+
+#: .\templates\MainApp\App\pages\orders.html:97
+#: .\templates\MainApp\mobile\pages\orders.html:231
+#: .\templates\auth\registration.html:97
+msgid "غينيا بيساو"
+msgstr "guinea-Bissau"
+
+#: .\templates\MainApp\App\pages\orders.html:98
+#: .\templates\MainApp\mobile\pages\orders.html:232
+#: .\templates\auth\registration.html:98
+msgid "غويانا"
+msgstr "guyana"
+
+#: .\templates\MainApp\App\pages\orders.html:99
+#: .\templates\MainApp\mobile\pages\orders.html:233
+#: .\templates\auth\registration.html:99
+msgid "هايتي"
+msgstr "haiti"
+
+#: .\templates\MainApp\App\pages\orders.html:100
+#: .\templates\MainApp\mobile\pages\orders.html:234
+#: .\templates\auth\registration.html:100
+msgid "هندوراس"
+msgstr "honduras"
+
+#: .\templates\MainApp\App\pages\orders.html:101
+#: .\templates\MainApp\mobile\pages\orders.html:235
+#: .\templates\auth\registration.html:101
+msgid "المجر"
+msgstr "hungary"
+
+#: .\templates\MainApp\App\pages\orders.html:102
+#: .\templates\MainApp\mobile\pages\orders.html:236
+#: .\templates\auth\registration.html:102
+msgid "آيسلندا"
+msgstr "iceland"
+
+#: .\templates\MainApp\App\pages\orders.html:103
+#: .\templates\MainApp\mobile\pages\orders.html:237
+#: .\templates\auth\registration.html:103
+msgid "الهند"
+msgstr "india"
+
+#: .\templates\MainApp\App\pages\orders.html:104
+#: .\templates\MainApp\mobile\pages\orders.html:238
+#: .\templates\auth\registration.html:104
+msgid "إندونيسيا"
+msgstr "indonesia"
+
+#: .\templates\MainApp\App\pages\orders.html:105
+#: .\templates\MainApp\mobile\pages\orders.html:239
+#: .\templates\auth\registration.html:105
+msgid "إيران"
+msgstr "iran"
+
+#: .\templates\MainApp\App\pages\orders.html:106
+#: .\templates\MainApp\mobile\pages\orders.html:240
+#: .\templates\auth\registration.html:106
+msgid "العراق"
+msgstr "iraq"
+
+#: .\templates\MainApp\App\pages\orders.html:107
+#: .\templates\MainApp\mobile\pages\orders.html:241
+#: .\templates\auth\registration.html:107
+msgid "جمهورية أيرلندا"
+msgstr "republic of Ireland"
+
+#: .\templates\MainApp\App\pages\orders.html:108
+#: .\templates\MainApp\mobile\pages\orders.html:242
+#: .\templates\auth\registration.html:108
+msgid "فلسطين"
+msgstr "palestine"
+
+#: .\templates\MainApp\App\pages\orders.html:109
+#: .\templates\MainApp\mobile\pages\orders.html:243
+#: .\templates\auth\registration.html:109
+msgid "إيطاليا"
+msgstr "italy"
+
+#: .\templates\MainApp\App\pages\orders.html:110
+#: .\templates\MainApp\mobile\pages\orders.html:244
+#: .\templates\auth\registration.html:110
+msgid "جامايكا"
+msgstr "jamaica"
+
+#: .\templates\MainApp\App\pages\orders.html:111
+#: .\templates\MainApp\mobile\pages\orders.html:245
+#: .\templates\auth\registration.html:111
+msgid "اليابان"
+msgstr "japan"
+
+#: .\templates\MainApp\App\pages\orders.html:112
+#: .\templates\MainApp\mobile\pages\orders.html:246
+#: .\templates\auth\registration.html:112
+msgid "الأردن"
+msgstr "jordan"
+
+#: .\templates\MainApp\App\pages\orders.html:113
+#: .\templates\MainApp\mobile\pages\orders.html:247
+#: .\templates\auth\registration.html:113
+msgid "كازاخستان"
+msgstr "kazakhstan"
+
+#: .\templates\MainApp\App\pages\orders.html:114
+#: .\templates\MainApp\mobile\pages\orders.html:248
+#: .\templates\auth\registration.html:114
+msgid "كينيا"
+msgstr "kenya"
+
+#: .\templates\MainApp\App\pages\orders.html:115
+#: .\templates\MainApp\mobile\pages\orders.html:249
+#: .\templates\auth\registration.html:115
+msgid "كيريباتي"
+msgstr "kiribati"
+
+#: .\templates\MainApp\App\pages\orders.html:116
+#: .\templates\MainApp\mobile\pages\orders.html:250
+#: .\templates\auth\registration.html:116
+msgid "الكويت"
+msgstr "kuwait"
+
+#: .\templates\MainApp\App\pages\orders.html:117
+#: .\templates\MainApp\mobile\pages\orders.html:251
+#: .\templates\auth\registration.html:117
+msgid "قرغيزستان"
+msgstr "kyrgyzstan"
+
+#: .\templates\MainApp\App\pages\orders.html:118
+#: .\templates\MainApp\App\pages\orders.html:119
+#: .\templates\MainApp\mobile\pages\orders.html:252
+#: .\templates\MainApp\mobile\pages\orders.html:253
+#: .\templates\auth\registration.html:118
+#: .\templates\auth\registration.html:119
+msgid "لاوس"
+msgstr "laos"
+
+#: .\templates\MainApp\App\pages\orders.html:120
+#: .\templates\MainApp\mobile\pages\orders.html:254
+#: .\templates\auth\registration.html:120
+msgid "لاتفيا"
+msgstr "latvia"
+
+#: .\templates\MainApp\App\pages\orders.html:121
+#: .\templates\MainApp\mobile\pages\orders.html:255
+#: .\templates\auth\registration.html:121
+msgid "لبنان"
+msgstr "lebanon"
+
+#: .\templates\MainApp\App\pages\orders.html:122
+#: .\templates\MainApp\mobile\pages\orders.html:256
+#: .\templates\auth\registration.html:122
+msgid "ليسوتو"
+msgstr "lesotho"
+
+#: .\templates\MainApp\App\pages\orders.html:123
+#: .\templates\MainApp\mobile\pages\orders.html:257
+#: .\templates\auth\registration.html:123
+msgid "ليبيريا"
+msgstr "liberia"
+
+#: .\templates\MainApp\App\pages\orders.html:124
+#: .\templates\MainApp\mobile\pages\orders.html:258
+#: .\templates\auth\registration.html:124
+msgid "ليبيا"
+msgstr "libya"
+
+#: .\templates\MainApp\App\pages\orders.html:125
+#: .\templates\MainApp\mobile\pages\orders.html:259
+#: .\templates\auth\registration.html:125
+msgid "ليختنشتاين"
+msgstr "liechtenstein"
+
+#: .\templates\MainApp\App\pages\orders.html:126
+#: .\templates\MainApp\mobile\pages\orders.html:260
+#: .\templates\auth\registration.html:126
+msgid "ليتوانيا"
+msgstr "lithuania"
+
+#: .\templates\MainApp\App\pages\orders.html:127
+#: .\templates\MainApp\mobile\pages\orders.html:261
+#: .\templates\auth\registration.html:127
+msgid "لوكسمبورغ"
+msgstr "luxembourg"
+
+#: .\templates\MainApp\App\pages\orders.html:128
+#: .\templates\MainApp\mobile\pages\orders.html:262
+#: .\templates\auth\registration.html:128
+msgid "مدغشقر"
+msgstr "madagascar"
+
+#: .\templates\MainApp\App\pages\orders.html:129
+#: .\templates\MainApp\mobile\pages\orders.html:263
+#: .\templates\auth\registration.html:129
+msgid "مالاوي"
+msgstr "malawi"
+
+#: .\templates\MainApp\App\pages\orders.html:130
+#: .\templates\MainApp\mobile\pages\orders.html:264
+#: .\templates\auth\registration.html:130
+msgid "ماليزيا"
+msgstr "malaysia"
+
+#: .\templates\MainApp\App\pages\orders.html:131
+#: .\templates\MainApp\mobile\pages\orders.html:265
+#: .\templates\auth\registration.html:131
+msgid "جزر المالديف"
+msgstr "maldives"
+
+#: .\templates\MainApp\App\pages\orders.html:132
+#: .\templates\MainApp\mobile\pages\orders.html:266
+#: .\templates\auth\registration.html:132
+msgid "مالي"
+msgstr "mali"
+
+#: .\templates\MainApp\App\pages\orders.html:133
+#: .\templates\MainApp\mobile\pages\orders.html:267
+#: .\templates\auth\registration.html:133
+msgid "مالطا"
+msgstr "malta"
+
+#: .\templates\MainApp\App\pages\orders.html:134
+#: .\templates\MainApp\mobile\pages\orders.html:268
+#: .\templates\auth\registration.html:134
+msgid "جزر مارشال"
+msgstr "marshall Islands"
+
+#: .\templates\MainApp\App\pages\orders.html:135
+#: .\templates\MainApp\mobile\pages\orders.html:269
+#: .\templates\auth\registration.html:135
+msgid "موريتانيا"
+msgstr "mauritania"
+
+#: .\templates\MainApp\App\pages\orders.html:136
+#: .\templates\MainApp\mobile\pages\orders.html:270
+#: .\templates\auth\registration.html:136
+msgid "موريشيوس"
+msgstr "mauritius"
+
+#: .\templates\MainApp\App\pages\orders.html:137
+#: .\templates\MainApp\mobile\pages\orders.html:271
+#: .\templates\auth\registration.html:137
+msgid "المكسيك"
+msgstr "mexico"
+
+#: .\templates\MainApp\App\pages\orders.html:138
+#: .\templates\MainApp\mobile\pages\orders.html:272
+#: .\templates\auth\registration.html:138
+msgid "مايكرونيزيا"
+msgstr "micronesia"
+
+#: .\templates\MainApp\App\pages\orders.html:139
+#: .\templates\MainApp\mobile\pages\orders.html:273
+#: .\templates\auth\registration.html:139
+msgid "مولدوفا"
+msgstr "moldova"
+
+#: .\templates\MainApp\App\pages\orders.html:140
+#: .\templates\MainApp\mobile\pages\orders.html:274
+#: .\templates\auth\registration.html:140
+msgid "موناكو"
+msgstr "monaco"
+
+#: .\templates\MainApp\App\pages\orders.html:141
+#: .\templates\MainApp\mobile\pages\orders.html:275
+#: .\templates\auth\registration.html:141
+msgid "منغوليا"
+msgstr "mongolia"
+
+#: .\templates\MainApp\App\pages\orders.html:142
+#: .\templates\MainApp\mobile\pages\orders.html:276
+#: .\templates\auth\registration.html:142
+msgid "الجبل الأسود"
+msgstr "montenegro"
+
+#: .\templates\MainApp\App\pages\orders.html:143
+#: .\templates\MainApp\mobile\pages\orders.html:277
+#: .\templates\auth\registration.html:143
+msgid "المغرب"
+msgstr "morocco"
+
+#: .\templates\MainApp\App\pages\orders.html:144
+#: .\templates\MainApp\mobile\pages\orders.html:278
+#: .\templates\auth\registration.html:144
+msgid "موزمبيق"
+msgstr "mozambique"
+
+#: .\templates\MainApp\App\pages\orders.html:145
+#: .\templates\MainApp\mobile\pages\orders.html:279
+#: .\templates\auth\registration.html:145
+msgid "بورما"
+msgstr "burma"
+
+#: .\templates\MainApp\App\pages\orders.html:146
+#: .\templates\MainApp\mobile\pages\orders.html:280
+#: .\templates\auth\registration.html:146
+msgid "ناميبيا"
+msgstr "namibia"
+
+#: .\templates\MainApp\App\pages\orders.html:147
+#: .\templates\MainApp\mobile\pages\orders.html:281
+#: .\templates\auth\registration.html:147
+msgid "ناورو"
+msgstr "nauru"
+
+#: .\templates\MainApp\App\pages\orders.html:148
+#: .\templates\MainApp\mobile\pages\orders.html:282
+#: .\templates\auth\registration.html:148
+msgid "نيبال"
+msgstr "nepal"
+
+#: .\templates\MainApp\App\pages\orders.html:149
+#: .\templates\MainApp\mobile\pages\orders.html:283
+#: .\templates\auth\registration.html:149
+msgid "هولندا"
+msgstr "netherlands"
+
+#: .\templates\MainApp\App\pages\orders.html:150
+#: .\templates\MainApp\mobile\pages\orders.html:284
+#: .\templates\auth\registration.html:150
+msgid "نيوزيلندا"
+msgstr "new Zealand"
+
+#: .\templates\MainApp\App\pages\orders.html:151
+#: .\templates\MainApp\mobile\pages\orders.html:285
+#: .\templates\auth\registration.html:151
+msgid "نيكاراجوا"
+msgstr "nicaragua"
+
+#: .\templates\MainApp\App\pages\orders.html:152
+#: .\templates\MainApp\mobile\pages\orders.html:286
+#: .\templates\auth\registration.html:152
+msgid "النيجر"
+msgstr "niger"
+
+#: .\templates\MainApp\App\pages\orders.html:153
+#: .\templates\MainApp\mobile\pages\orders.html:287
+#: .\templates\auth\registration.html:153
+msgid "نيجيريا"
+msgstr "nigeria"
+
+#: .\templates\MainApp\App\pages\orders.html:154
+#: .\templates\MainApp\mobile\pages\orders.html:288
+#: .\templates\auth\registration.html:154
+msgid "كوريا الشمالية"
+msgstr "north Korea"
+
+#: .\templates\MainApp\App\pages\orders.html:155
+#: .\templates\MainApp\mobile\pages\orders.html:289
+#: .\templates\auth\registration.html:155
+msgid "النرويج"
+msgstr "norway"
+
+#: .\templates\MainApp\App\pages\orders.html:156
+#: .\templates\MainApp\mobile\pages\orders.html:290
+#: .\templates\auth\registration.html:156
+msgid "سلطنة عمان"
+msgstr "sultanate of Oman"
+
+#: .\templates\MainApp\App\pages\orders.html:157
+#: .\templates\MainApp\mobile\pages\orders.html:291
+#: .\templates\auth\registration.html:157
+msgid "باكستان"
+msgstr "pakistan"
+
+#: .\templates\MainApp\App\pages\orders.html:158
+#: .\templates\MainApp\mobile\pages\orders.html:292
+#: .\templates\auth\registration.html:158
+msgid "بالاو"
+msgstr "palau"
+
+#: .\templates\MainApp\App\pages\orders.html:159
+#: .\templates\MainApp\mobile\pages\orders.html:293
+#: .\templates\auth\registration.html:159
+msgid "بنما"
+msgstr "panama"
+
+#: .\templates\MainApp\App\pages\orders.html:160
+#: .\templates\MainApp\mobile\pages\orders.html:294
+#: .\templates\auth\registration.html:160
+msgid "بابوا غينيا الجديدة"
+msgstr "papua New Guinea"
+
+#: .\templates\MainApp\App\pages\orders.html:161
+#: .\templates\MainApp\mobile\pages\orders.html:295
+#: .\templates\auth\registration.html:161
+msgid "باراغواي"
+msgstr "paraguay"
+
+#: .\templates\MainApp\App\pages\orders.html:162
+#: .\templates\MainApp\mobile\pages\orders.html:296
+#: .\templates\auth\registration.html:162
+msgid "بيرو"
+msgstr "peru"
+
+#: .\templates\MainApp\App\pages\orders.html:163
+#: .\templates\MainApp\mobile\pages\orders.html:297
+#: .\templates\auth\registration.html:163
+msgid "الفلبين"
+msgstr "philippines"
+
+#: .\templates\MainApp\App\pages\orders.html:164
+#: .\templates\MainApp\mobile\pages\orders.html:298
+#: .\templates\auth\registration.html:164
+msgid "بولندا"
+msgstr "poland"
+
+#: .\templates\MainApp\App\pages\orders.html:165
+#: .\templates\MainApp\mobile\pages\orders.html:299
+#: .\templates\auth\registration.html:165
+msgid "البرتغال"
+msgstr "portugal"
+
+#: .\templates\MainApp\App\pages\orders.html:166
+#: .\templates\MainApp\mobile\pages\orders.html:300
+#: .\templates\auth\registration.html:166
+msgid "قطر"
+msgstr "qatar"
+
+#: .\templates\MainApp\App\pages\orders.html:167
+#: .\templates\MainApp\mobile\pages\orders.html:301
+#: .\templates\auth\registration.html:167
+msgid "جمهورية الكونغو"
+msgstr "republic of the Congo"
+
+#: .\templates\MainApp\App\pages\orders.html:168
+#: .\templates\MainApp\mobile\pages\orders.html:302
+#: .\templates\auth\registration.html:168
+msgid "جمهورية مقدونيا"
+msgstr "republic of Macedonia"
+
+#: .\templates\MainApp\App\pages\orders.html:169
+#: .\templates\MainApp\mobile\pages\orders.html:303
+#: .\templates\auth\registration.html:169
+msgid "رومانيا"
+msgstr "romania"
+
+#: .\templates\MainApp\App\pages\orders.html:170
+#: .\templates\MainApp\mobile\pages\orders.html:304
+#: .\templates\auth\registration.html:170
+msgid "روسيا"
+msgstr "russia"
+
+#: .\templates\MainApp\App\pages\orders.html:171
+#: .\templates\MainApp\mobile\pages\orders.html:305
+#: .\templates\auth\registration.html:171
+msgid "رواندا"
+msgstr "rwanda"
+
+#: .\templates\MainApp\App\pages\orders.html:172
+#: .\templates\MainApp\mobile\pages\orders.html:306
+#: .\templates\auth\registration.html:172
+msgid "سانت كيتس ونيفيس"
+msgstr "st. Kitts and Nevis"
+
+#: .\templates\MainApp\App\pages\orders.html:173
+#: .\templates\MainApp\mobile\pages\orders.html:307
+#: .\templates\auth\registration.html:173
+msgid "سانت لوسيا"
+msgstr "saint Lucia"
+
+#: .\templates\MainApp\App\pages\orders.html:174
+#: .\templates\MainApp\mobile\pages\orders.html:308
+#: .\templates\auth\registration.html:174
+msgid "سانت فنسينت والجرينادينز"
+msgstr "st. Vincent and the Grenadines"
+
+#: .\templates\MainApp\App\pages\orders.html:175
+#: .\templates\MainApp\mobile\pages\orders.html:309
+#: .\templates\auth\registration.html:175
+msgid "ساموا"
+msgstr "samoa"
+
+#: .\templates\MainApp\App\pages\orders.html:176
+#: .\templates\MainApp\mobile\pages\orders.html:310
+#: .\templates\auth\registration.html:176
+msgid "سان مارينو"
+msgstr "san Marino"
+
+#: .\templates\MainApp\App\pages\orders.html:177
+#: .\templates\MainApp\mobile\pages\orders.html:311
+#: .\templates\auth\registration.html:177
+msgid "ساو تومي وبرينسيب"
+msgstr "sao Tome and Principe"
+
+#: .\templates\MainApp\App\pages\orders.html:178
+#: .\templates\MainApp\mobile\pages\orders.html:312
+#: .\templates\auth\registration.html:178
+msgid "السعودية"
+msgstr "saudi Arabia"
+
+#: .\templates\MainApp\App\pages\orders.html:179
+#: .\templates\MainApp\mobile\pages\orders.html:313
+#: .\templates\auth\registration.html:179
+msgid "السنغال"
+msgstr "senegal"
+
+#: .\templates\MainApp\App\pages\orders.html:180
+#: .\templates\MainApp\mobile\pages\orders.html:314
+#: .\templates\auth\registration.html:180
+msgid "صربيا"
+msgstr "serbia"
+
+#: .\templates\MainApp\App\pages\orders.html:181
+#: .\templates\MainApp\mobile\pages\orders.html:315
+#: .\templates\auth\registration.html:181
+msgid "سيشيل"
+msgstr "seychelles"
+
+#: .\templates\MainApp\App\pages\orders.html:182
+#: .\templates\MainApp\mobile\pages\orders.html:316
+#: .\templates\auth\registration.html:182
+msgid "سيراليون"
+msgstr "sierra Leone"
+
+#: .\templates\MainApp\App\pages\orders.html:183
+#: .\templates\MainApp\mobile\pages\orders.html:317
+#: .\templates\auth\registration.html:183
+msgid "سنغافورة"
+msgstr "singapore"
+
+#: .\templates\MainApp\App\pages\orders.html:184
+#: .\templates\MainApp\mobile\pages\orders.html:318
+#: .\templates\auth\registration.html:184
+msgid "سلوفاكيا"
+msgstr "slovakia"
+
+#: .\templates\MainApp\App\pages\orders.html:185
+#: .\templates\MainApp\mobile\pages\orders.html:319
+#: .\templates\auth\registration.html:185
+msgid "سلوفينيا"
+msgstr "slovenia"
+
+#: .\templates\MainApp\App\pages\orders.html:186
+#: .\templates\MainApp\mobile\pages\orders.html:320
+#: .\templates\auth\registration.html:186
+msgid "جزر سليمان"
+msgstr "solomon Islands"
+
+#: .\templates\MainApp\App\pages\orders.html:187
+#: .\templates\MainApp\mobile\pages\orders.html:321
+#: .\templates\auth\registration.html:187
+msgid "الصومال"
+msgstr "somalia"
+
+#: .\templates\MainApp\App\pages\orders.html:188
+#: .\templates\MainApp\mobile\pages\orders.html:322
+#: .\templates\auth\registration.html:188
+msgid "جنوب أفريقيا"
+msgstr "south Africa"
+
+#: .\templates\MainApp\App\pages\orders.html:189
+#: .\templates\MainApp\mobile\pages\orders.html:323
+#: .\templates\auth\registration.html:189
+msgid "كوريا الجنوبية"
+msgstr "south Korea"
+
+#: .\templates\MainApp\App\pages\orders.html:190
+#: .\templates\MainApp\mobile\pages\orders.html:324
+#: .\templates\auth\registration.html:190
+msgid "جنوب السودان"
+msgstr "south Sudan"
+
+#: .\templates\MainApp\App\pages\orders.html:191
+#: .\templates\MainApp\mobile\pages\orders.html:325
+#: .\templates\auth\registration.html:191
+msgid "إسبانيا"
+msgstr "spain"
+
+#: .\templates\MainApp\App\pages\orders.html:192
+#: .\templates\MainApp\mobile\pages\orders.html:326
+#: .\templates\auth\registration.html:192
+msgid "سريلانكا"
+msgstr "sri Lanka"
+
+#: .\templates\MainApp\App\pages\orders.html:193
+#: .\templates\MainApp\mobile\pages\orders.html:327
+#: .\templates\auth\registration.html:193
+msgid "السودان"
+msgstr "sudan"
+
+#: .\templates\MainApp\App\pages\orders.html:194
+#: .\templates\MainApp\mobile\pages\orders.html:328
+#: .\templates\auth\registration.html:194
+msgid "سورينام"
+msgstr "suriname"
+
+#: .\templates\MainApp\App\pages\orders.html:195
+#: .\templates\MainApp\mobile\pages\orders.html:329
+#: .\templates\auth\registration.html:195
+msgid "سوازيلاند"
+msgstr "swaziland"
+
+#: .\templates\MainApp\App\pages\orders.html:196
+#: .\templates\MainApp\mobile\pages\orders.html:330
+#: .\templates\auth\registration.html:196
+msgid "السويد"
+msgstr "sweden"
+
+#: .\templates\MainApp\App\pages\orders.html:197
+#: .\templates\MainApp\mobile\pages\orders.html:331
+#: .\templates\auth\registration.html:197
+msgid "سويسرا"
+msgstr "switzerland"
+
+#: .\templates\MainApp\App\pages\orders.html:198
+#: .\templates\MainApp\mobile\pages\orders.html:332
+#: .\templates\auth\registration.html:198
+msgid "سوريا"
+msgstr "syria"
+
+#: .\templates\MainApp\App\pages\orders.html:199
+#: .\templates\MainApp\mobile\pages\orders.html:333
+#: .\templates\auth\registration.html:199
+msgid "طاجيكستان"
+msgstr "tajikistan"
+
+#: .\templates\MainApp\App\pages\orders.html:200
+#: .\templates\MainApp\mobile\pages\orders.html:334
+#: .\templates\auth\registration.html:200
+msgid "تنزانيا"
+msgstr "tanzania"
+
+#: .\templates\MainApp\App\pages\orders.html:201
+#: .\templates\MainApp\mobile\pages\orders.html:335
+#: .\templates\auth\registration.html:201
+msgid "تايلاند"
+msgstr "thailand"
+
+#: .\templates\MainApp\App\pages\orders.html:202
+#: .\templates\MainApp\mobile\pages\orders.html:336
+#: .\templates\auth\registration.html:202
+msgid "توغو"
+msgstr "togo"
+
+#: .\templates\MainApp\App\pages\orders.html:203
+#: .\templates\MainApp\mobile\pages\orders.html:337
+#: .\templates\auth\registration.html:203
+msgid "تونجا"
+msgstr "tonga"
+
+#: .\templates\MainApp\App\pages\orders.html:204
+#: .\templates\MainApp\mobile\pages\orders.html:338
+#: .\templates\auth\registration.html:204
+msgid "ترينيداد وتوباغو"
+msgstr "trinidad and Tobago"
+
+#: .\templates\MainApp\App\pages\orders.html:205
+#: .\templates\MainApp\mobile\pages\orders.html:339
+#: .\templates\auth\registration.html:205
+msgid "تونس"
+msgstr "tunisia"
+
+#: .\templates\MainApp\App\pages\orders.html:206
+#: .\templates\MainApp\mobile\pages\orders.html:340
+#: .\templates\auth\registration.html:206
+msgid "تركيا"
+msgstr "turkey"
+
+#: .\templates\MainApp\App\pages\orders.html:207
+#: .\templates\MainApp\mobile\pages\orders.html:341
+#: .\templates\auth\registration.html:207
+msgid "تركمانستان"
+msgstr "turkmenistan"
+
+#: .\templates\MainApp\App\pages\orders.html:208
+#: .\templates\MainApp\mobile\pages\orders.html:342
+#: .\templates\auth\registration.html:208
+msgid "توفالو"
+msgstr "tuvalu"
+
+#: .\templates\MainApp\App\pages\orders.html:209
+#: .\templates\MainApp\mobile\pages\orders.html:343
+#: .\templates\auth\registration.html:209
+msgid "أوغندا"
+msgstr "uganda"
+
+#: .\templates\MainApp\App\pages\orders.html:210
+#: .\templates\MainApp\mobile\pages\orders.html:344
+#: .\templates\auth\registration.html:210
+msgid "أوكرانيا"
+msgstr "ukraine"
+
+#: .\templates\MainApp\App\pages\orders.html:211
+#: .\templates\MainApp\mobile\pages\orders.html:345
+#: .\templates\auth\registration.html:211
+msgid "الإمارات العربية المتحدة"
+msgstr "united Arab Emirates"
+
+#: .\templates\MainApp\App\pages\orders.html:212
+#: .\templates\MainApp\mobile\pages\orders.html:346
+#: .\templates\auth\registration.html:212
+msgid "المملكة المتحدة"
+msgstr "united Kingdom"
+
+#: .\templates\MainApp\App\pages\orders.html:213
+#: .\templates\MainApp\mobile\pages\orders.html:347
+#: .\templates\auth\registration.html:213
+msgid "الولايات المتحدة"
+msgstr "united States"
+
+#: .\templates\MainApp\App\pages\orders.html:214
+#: .\templates\MainApp\mobile\pages\orders.html:348
+#: .\templates\auth\registration.html:214
+msgid "أوروغواي"
+msgstr "uruguay"
+
+#: .\templates\MainApp\App\pages\orders.html:215
+#: .\templates\MainApp\mobile\pages\orders.html:349
+#: .\templates\auth\registration.html:215
+msgid "أوزبكستان"
+msgstr "uzbekistan"
+
+#: .\templates\MainApp\App\pages\orders.html:216
+#: .\templates\MainApp\mobile\pages\orders.html:350
+#: .\templates\auth\registration.html:216
+msgid "فانواتو"
+msgstr "vanuatu"
+
+#: .\templates\MainApp\App\pages\orders.html:217
+#: .\templates\MainApp\mobile\pages\orders.html:351
+#: .\templates\auth\registration.html:217
+msgid "فنزويلا"
+msgstr "venezuela"
+
+#: .\templates\MainApp\App\pages\orders.html:218
+#: .\templates\MainApp\mobile\pages\orders.html:352
+#: .\templates\auth\registration.html:218
+msgid "فيتنام"
+msgstr "vietnam"
+
+#: .\templates\MainApp\App\pages\orders.html:219
+#: .\templates\MainApp\mobile\pages\orders.html:353
+#: .\templates\auth\registration.html:219
+msgid "اليمن"
+msgstr "yemen"
+
+#: .\templates\MainApp\App\pages\orders.html:220
+#: .\templates\MainApp\mobile\pages\orders.html:354
+#: .\templates\auth\registration.html:220
+msgid "زامبيا"
+msgstr "zambia"
+
+#: .\templates\MainApp\App\pages\orders.html:221
+#: .\templates\MainApp\mobile\pages\orders.html:355
+#: .\templates\auth\registration.html:221
+msgid "زيمبابوي"
+msgstr "zimbabwe"
+
+#: .\templates\MainApp\App\pages\orders.html:228
+#: .\templates\MainApp\mobile\pages\orders.html:361
+msgid "لا يوجد مواعيد متاحة"
+msgstr "no appointments available"
+
+#: .\templates\MainApp\App\pages\orders.html:247
+msgid "إرسال الطلب"
+msgstr "sending a request"
+
+#: .\templates\MainApp\App\pages\orders.html:257
+msgid "طلبات"
+msgstr "requests"
+
+#: .\templates\MainApp\App\pages\orders.html:270
+msgid "طلب حظور -"
+msgstr "order a ban -"
+
+#: .\templates\MainApp\App\pages\profile.html:8
+msgid "معلومات الحساب الشخصي"
+msgstr "personal Account Information"
+
+#: .\templates\MainApp\App\pages\profile.html:16
+#: .\templates\MainApp\mobile\pages\profile.html:10
+msgid "Photo profile"
+msgstr "Photo profile"
+
+#: .\templates\MainApp\App\pages\profile.html:22
+msgid "الاسم"
+msgstr "name"
+
+#: .\templates\MainApp\App\pages\profile.html:36
+msgid "رقم هاتف ثاني"
+msgstr "second phone number"
+
+#: .\templates\MainApp\App\pages\profile.html:46
+msgid "الاشعارات"
+msgstr "notifications"
+
+#: .\templates\MainApp\App\pages\profile.html:53
+msgid "Edit"
+msgstr "Edit"
+
+#: .\templates\MainApp\App\pages\viewReq.html:14
+#: .\templates\MainApp\mobile\pages\viewreq.html:8
+msgid "اسم المرسل"
+msgstr "sender's name"
+
+#: .\templates\MainApp\App\pages\viewReq.html:20
+#: .\templates\MainApp\mobile\pages\viewreq.html:14
+msgid "قيد المراجعة"
+msgstr "under review"
+
+#: .\templates\MainApp\App\pages\viewReq.html:29
+#: .\templates\MainApp\mobile\pages\viewreq.html:30
+msgid "رقم الهاتف"
+msgstr "phone number"
+
+#: .\templates\MainApp\App\pages\viewReq.html:58
+#: .\templates\MainApp\mobile\pages\viewreq.html:44
+msgid "ملاحظات"
+msgstr "notes"
+
+#: .\templates\MainApp\App\pages\viewReq.html:67
+#: .\templates\MainApp\mobile\pages\viewreq.html:52
+msgid "حذف الطلب"
+msgstr "delete order"
+
+#: .\templates\MainApp\mobile\components\bottomNav.html:13
+msgid "الرئيسية"
+msgstr "home"
+
+#: .\templates\MainApp\mobile\components\bottomNav.html:17
+msgid "الاعدادات"
+msgstr "settings"
+
+#: .\templates\MainApp\mobile\index.html:37
+msgid "تم بنجاح !"
+msgstr "successfully done !"
+
+#: .\templates\MainApp\mobile\index.html:68
+#: .\templates\MainApp\mobile\pages\orders.html:18
+msgid "حالة طلب"
+msgstr "order status"
+
+#: .\templates\MainApp\mobile\pages\orders.html:27
+msgid "طلب حظور"
+msgstr "order a ban"
+
+#: .\templates\MainApp\mobile\pages\orders.html:56
+msgid "اضافة طلب جديد"
+msgstr "add a new order"
+
+#: .\templates\MainApp\mobile\pages\orders.html:94
+msgid "طلب حضور احتفاء"
+msgstr "request to Attend a Celebration"
+
+#: .\templates\MainApp\mobile\pages\orders.html:365
+msgid "اختر موعد الحضور"
+msgstr "choose when to show up"
+
+#: .\templates\MainApp\mobile\pages\orders.html:393
+msgid "مكتمل"
+msgstr "completed"
+
+#: .\templates\MainApp\mobile\pages\orders.html:410
+msgid "ارسال الطلب"
+msgstr "send a request"
+
+#: .\templates\MainApp\mobile\pages\profile.html:29
+msgid "رقم هاتف"
+msgstr "phone number"
+
+#: .\templates\MainApp\mobile\pages\profile.html:58
+msgid "تعديل المعلومات الشخصية"
+msgstr "Edit personal information"
+
+#: .\templates\MainApp\mobile\pages\updateProfile.html:5
+msgid "تعديل على المعلومات الشخصية"
+msgstr "Edit personal information"
+
+#: .\templates\MainApp\mobile\pages\updateProfile.html:85
+msgid "جاري الحفظ..."
+msgstr "Saving..."
+
+#: .\templates\auth\login.html:46 .\templates\auth\registration.html:240
+msgid "كلمة المرور"
+msgstr "password"
+
+#: .\templates\auth\login.html:58 .\templates\auth\registration.html:256
+msgid "تسجيل الدخول"
+msgstr "login"
+
+#: .\templates\auth\login.html:63
+msgid "تسجيل جديد"
+msgstr "new registration"
+
+#: .\templates\auth\registration.html:17
+msgid "الاسم الاول"
+msgstr "first name"
+
+#: .\templates\auth\registration.html:22
+msgid "الاسم الاخير"
+msgstr "last name"
+
+#: .\templates\auth\registration.html:27
+msgid "إختر الجنسية"
+msgstr "choose nationality"
+
+#: .\templates\auth\registration.html:235
+msgid "رقم الهاتف الشخصي"
+msgstr "personal phone number"
+
+#: .\templates\auth\registration.html:245
+msgid "تاكيد كلمة المرور"
+msgstr "password Confirmation"
+
+#: .\templates\auth\registration.html:251
+msgid "تسجيل"
+msgstr "registration"
+
+#, fuzzy
+#~| msgid "جنسية الزوار"
+#~ msgid "إختر جنسية الزوار"
+#~ msgstr "nationality of visitors"
+
+#~ msgid "جمعية حفاوة لخدمة الحاج والمعتمر والزائر"
+#~ msgstr "hafawah Association to serve pilgrims, pilgrims and visitors"
+
+#~ msgid "إغلاق"
+#~ msgstr "close"

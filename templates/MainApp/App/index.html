@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load i18n %}
 {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en" data-theme="dash">
@@ -18,13 +18,13 @@
   <title>HAFAWA</title>
 </head>
 
-<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' dir="rtl" class="flex w-full h-screen max-h-screen bg-main1">
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' dir="{% trans 'rtl' %}" class="flex w-full h-screen max-h-screen bg-main1">
   {% include "MainApp/App/components/sidebar.html" %}
   <div class="grid grid-cols-1 p-4 bg-main1 w-full h-screen">
     {% if messages %}
     {% for m in messages %}
     <div class="p-4 mb-4 text-sm absolute top-1  text-red-800 rounded-lg bg-red-50">
-            <span class=" font-medium">حدث خطاء !</span> {{m}}
+            <span class=" font-medium">{% trans "حدث خطاء !" %}</span> {{m}}
     </div>
     {% endfor %}
     {% endif %}
@@ -32,17 +32,17 @@
     <div class="grid grid-cols-2 grid-rows-1 gap-2 h-full rounded-lg p-3 animate-fade-in">
       <div class="grid grid-cols-1 grid-rows-2 gap-2 rounded-lg drop-shadow-lg">
         <div class="bg-white h-full row-span-12 rounded-lg drop-shadow-lg p-3">
-          <h1>الطلبات الحالية</h1>
+          <h1>{% trans "الطلبات الحالية" %}</h1>
           <hr class="my-2 rounded-xl" />
           <div class="max-h-full rounded-lg border border-gray-200">
             <table class="min-w-full divide-y-2 divide-gray-200 bg-main1-t text-sm">
               <thead class="bg-main3-t rounded-lg">
                 <tr>
                   <th class="whitespace-nowrap px-4 py-2 font-medium text-main1-t">
-                    الطلبات
+                    {% trans "الطلبات" %}
                   </th>
                   <th class="whitespace-nowrap px-4 py-2 font-medium text-main1-t">
-                    حالة الطلب
+                    {% trans "حالة الطلب" %}
                   </th>
                 </tr>
               </thead>
@@ -52,19 +52,19 @@
                 <tr>
                   <td hx-get="{% url 'viewReq' rs.id %}" hx-target="#viewReq" hx-swap="innerHTML"
                     class="cursor-pointer whitespace-nowrap px-4 py-2 font-bold text-main4">
-                    طلب حضور - {{rs.event.name}}
+                    {% trans "طلب حضور -" %} {{rs.event.name}}
                   </td>
                   {% if rs.isApproved == -1 %}
                   <td class="whitespace-nowrap p-4 text-gray-700">
-                    <span class="p-2 bg-blue-500 rounded-xl">قيدالمراجعة</span>
+                    <span class="p-2 bg-blue-500 rounded-xl">{% trans "قيدالمراجعة" %}</span>
                   </td>
                   {% elif rs.isApproved == 0 %}
                   <td class="whitespace-nowrap p-4 text-gray-700">
-                    <span class="p-2 bg-red-500 rounded-xl">مرفوض</span>
+                    <span class="p-2 bg-red-500 rounded-xl">{% trans "مرفوض" %}</span>
                   </td>
                   {% elif rs.isApproved == 1 %}
                   <td class="whitespace-nowrap p-4 text-gray-700">
-                    <span class="p-2 bg-green-500 rounded-xl">مقبول</span>
+                    <span class="p-2 bg-green-500 rounded-xl">{% trans "مقبول" %}</span>
                   </td>
                   {% endif %}
                 </tr>
@@ -77,7 +77,7 @@
         </div>
       </div>
       <div class="max-h-1/2 bg-white rounded-lg drop-shadow-lg px-4 py-4">
-        <h1>مواعيد الاحتفاءات</h1>
+        <h1>{% trans "مواعيد الاحتفاءات" %}</h1>
         <hr class="my-2 rounded-xl" />
         <div class="overflow-y-auto">
           <div class="grid grid-cols-1 gap-2 ">

@@ -22,7 +22,7 @@ def index(request):
     if request.user.is_admin:
         return redirect("dashboard")
     if request.user_agent.is_mobile:
-        return render(request, "MainApp/mobile/index.html", {"E": events, "R": data ,"ads": AppAssets.objects.get(id=1)})
+        return render(request, "MainApp/mobile/index.html", {"E": events, "R": data ,"ads": AppAssets.objects.get(id=2)})
     return render(request, "MainApp/App/index.html", {"E": events, "R": data })
 
 

@@ -1,3 +1,4 @@
+{% load i18n %}
 {% for e in d %}
 <div class="flow-root overflow-y-auto rounded-lg border border-gray-100 py-3 shadow-sm">
     <a href="{{ request.META.HTTP_REFERER }}"
@@ -9,71 +10,63 @@
     </a>
     <dl class="-my-3 divide-y divide-gray-100 text-sm">
         <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-            <dt class="font-medium text-gray-900">اسم المرسل</dt>
-            <dd class="text-gray-700 sm:col-span-2">{{e.requester.first_name}} {{e.requester.last_name}}</dd>
+            <dt class="font-medium text-gray-900">{% trans 'اسم المرسل' %}</dt>
+            <dd class="text-gray-700 sm:col-span-2">{{ e.requester.first_name }} {{ e.requester.last_name }}</dd>
         </div>
         <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-            <dt class="font-medium text-gray-900">حالة الطلب</dt>
+            <dt class="font-medium text-gray-900">{% trans 'حالة الطلب' %}</dt>
             {% if e.isApproved == -1 %}
-            <dd class="text-gray-700 sm:col-span-2"> قيد المراجعة</dd>
+            <dd class="text-gray-700 sm:col-span-2">{% trans 'قيد المراجعة' %}</dd>
             {% elif e.isApproved == 0 %}
-            <dd class="text-gray-700 sm:col-span-2"> مرفوض</dd>
+            <dd class="text-gray-700 sm:col-span-2">{% trans 'مرفوض' %}</dd>
             {% elif e.isApproved == 1 %}
-            <dd class="text-gray-700 sm:col-span-2"> مقبول</dd>
+            <dd class="text-gray-700 sm:col-span-2">{% trans 'مقبول' %}</dd>
             {% endif %}
         </div>
         <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
             <dt class="font-medium text-gray-900">
-                رقم الهاتف
+                {% trans 'رقم الهاتف' %}
             </dt>
-            <dd class="text-gray-700 sm:col-span-2">{{e.requester.phone}} {{e.requester.cp}}+</dd>
+            <dd class="text-gray-700 sm:col-span-2">{{ e.requester.phone }} {{ e.requester.cp }}+</dd>
         </div>
         <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
             <dt class="font-medium text-gray-900">
-                اسم الفندق
+                {% trans 'اسم الفندق' %}
             </dt>
-            <dd class="text-gray-700 sm:col-span-2">{{e.hotelName}}</dd>
+            <dd class="text-gray-700 sm:col-span-2">{{ e.hotelName }}</dd>
         </div>
         <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
             <dt class="font-medium text-gray-900">
-                عنوان الفندق
+                {% trans 'عنوان الفندق' %}
             </dt>
-            <dd class="text-gray-700 sm:col-span-2">{{e.hotelLocation}}</dd>
+            <dd class="text-gray-700 sm:col-span-2">{{ e.hotelLocation }}</dd>
         </div>
         <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-            <dt class="font-medium text-gray-900">عدد الزوار</dt>
-            <dd class="text-gray-700 sm:col-span-2">{{e.numberOfGuests}}</dd>
+            <dt class="font-medium text-gray-900">{% trans 'عدد الزوار' %}</dt>
+            <dd class="text-gray-700 sm:col-span-2">{{ e.numberOfGuests }}</dd>
         </div>
         <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
             <dt class="font-medium text-gray-900">
-                جنسية الزوار
+                {% trans 'جنسية الزوار' %}
             </dt>
-            <dd class="text-gray-700 sm:col-span-2">{{e.nationaltyOfvisitors}}</dd>
+            <dd class="text-gray-700 sm:col-span-2">{{ e.nationaltyOfvisitors }}</dd>
         </div>
         {% if e.isApproved == 0 or e.isApproved == 1 %}
         <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
             <dt class="font-medium text-gray-900">
-                ملاحظات
+                {% trans 'ملاحظات' %}
             </dt>
-            <dd class="text-gray-700 sm:col-span-2">{{e.notes}}</dd>
+            <dd class="text-gray-700 sm:col-span-2">{{ e.notes }}</dd>
         </div>
         {% endif %}
         {% if e.isApproved == -1 %}
         <div class="grid grid-cols-1 gap-1 p-3 sm:gap-4">
             <button hx-delete="{% url 'deleteReq' e.id %}" onclick="this.disabled=true; window.location.href='/';"
                 class="inline-flex items-center justify-center w-full h-10 font-bold text-lg text-white bg-red-500 border-2 border-white rounded-xl">
-                حذف الطلب
+                {% trans 'حذف الطلب' %}
             </button>
         </div>
         {% endif %}
     </dl>
 </div>
 {% endfor %}
-
-
-<!-- 
-hotelName
-hotelLocation
-nationaltyOfvisitors
-event 
--->

@@ -8,7 +8,7 @@ class PR_profile(models.Model):
     homephone = models.CharField(max_length=20 , blank=True, default = "" ) 
     cp = models.CharField(max_length=5)
     nationalty = models.CharField(max_length=255)
-    personalPhoto = models.ImageField(upload_to='personalPhoto', default = 'personalPhoto/icon.png')
+    personalPhoto = models.ImageField(upload_to='personalPhoto', default = '')
     createDate = models.DateTimeField(default=timezone.now)
     class Meta:
         ordering = ["-createDate"]

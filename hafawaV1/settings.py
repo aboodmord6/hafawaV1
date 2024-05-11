@@ -1,3 +1,7 @@
+
+
+
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -15,8 +19,8 @@ WEBPUSH_SETTINGS = {
     "VAPID_ADMIN_EMAIL": "aboodmord7@gmail.com",
 }
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = False
+CSRF_TRUSTED_ORIGINS = ["https://hafawaa.com"]
 ALLOWED_HOSTS = ["*"]
 PWA_APP_DEBUG_MODE = False
 PWA_APP_DISPLAY = "standalone"
@@ -222,6 +226,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_htmx",
+    "whitenoise",
     # "storages",
     "django_user_agents",
     "webpush",
@@ -246,6 +251,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
 ]
 
 ROOT_URLCONF = "hafawaV1.urls"
@@ -274,8 +281,12 @@ WSGI_APPLICATION = "hafawaV1.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "hf",
+	"USER":"hfadmin",
+	"PASSWORD":"0506854327",
+	"HOST":"localhost",
+	"PORT":"5432",
     }
 }
 
@@ -303,19 +314,26 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = 'en'
+LANGUAGES = [
+    ('en', 'English'),
+    ('ar', 'Arabic')
+]
+LOCALE_PATHS = [
+    BASE_DIR / "locale/"
+]
 
-TIME_ZONE = "UTC"
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
-
+USE_L10N = True
 USE_TZ = True
 
-STATIC_URL = "/root/staticfiles/"
+STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
-MEDIA_URL = "/root/media/"
-MEDIA_ROOT = "/root/media"
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 TAILWIND_APP_NAME = "cssFramework"
 NPM_BIN_PATH = "npm"

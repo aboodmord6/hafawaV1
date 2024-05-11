@@ -1,55 +1,52 @@
 {% extends "MainApp/App/index.html" %}
 {% load webpush_notifications %}
+{% load i18n %}
 {% block main %}
 <div class="flex bg-white h-full rounded-lg drop-shadow-lg p-6 animate-fade-in">
     <div class=" w-full bg-main1 ">
         <div class="rounded-lg bg-white p-8 h-full">
-            <h1 class="text-2xl font-bold">معلومات الحساب الشخصي</h1>
+            <h1 class="text-2xl font-bold">{% trans "معلومات الحساب الشخصي" %}</h1>
             <hr class="my-4">
             <div class="bg-white p-3 shadow-sm rounded-sm">
                 <div class="text-gray-700 h-full flex flex-col w-full" id="ProfileContent">
 
                     <div class="h-24 max-w-24 bg-white rounded-3xl flex justify-center mb-5">
-                        {% if Profile.personalPhoto %}
-                        <img class="h-full w-full rounded-3xl bg-black" src="{{Profile.personalPhoto.url}}"
-                            alt="Photo profile" />
-                        {% endif %}
-                    </div>
+                     </div>
 
                     <div class="grid md:grid-cols-2 gap-8 text-sm items-end h-3/4">
                         <div class="grid grid-cols-2">
-                            <div class="px-4 py-2 font-semibold">الاسم</div>
+                            <div class="px-4 py-2 font-semibold">{% trans "الاسم" %}</div>
                             <div class="px-4 py-2">{{Profile.user.first_name}} {{Profile.user.last_name}}</div>
                         </div>
                         <div class="grid grid-cols-2">
-                            <div class="px-4 py-2 font-semibold">البريد الالكتروني.</div>
+                            <div class="px-4 py-2 font-semibold">{% trans "البريد الالكتروني" %}.</div>
                             <div class="px-4 py-2">
                                 {{Profile.user.email}}
                             </div>
                         </div>
                         <div class="grid grid-cols-2">
-                            <div class="px-4 py-2 font-semibold">رقم التواصل</div>
+                            <div class="px-4 py-2 font-semibold">{% trans "رقم التواصل" %}</div>
                             <div class="px-4 py-2">{{Profile.user.phone}} {{Profile.user.cp}}+</div>
                         </div>
                         <div class="grid grid-cols-2">
-                            <div class="px-4 py-2 font-semibold">رقم هاتف ثاني</div>
+                            <div class="px-4 py-2 font-semibold">{% trans "رقم هاتف ثاني" %}</div>
                             <div class="px-4 py-2">{{Profile.homephone}} {{Profile.cp}}+</div>
                         </div>
 
                         <div class="grid grid-cols-2">
-                            <div class="px-4 py-2 font-semibold">الجنسية</div>
+                            <div class="px-4 py-2 font-semibold">{% trans "الجنسية" %}</div>
                             <div class="px-4 py-2">{{Profile.nationalty}}</div>
                         </div>
                         <div class="grid grid-cols-2 ">
                             <span id="sub" sub="{{sub}}" class="hidden"></span>
-                            <span class="font-bold">الاشعارات</span>
+                            <span class="font-bold">{% trans "الاشعارات" %}</span>
                             {% webpush_button with_class="bg-main3-t rounded-lg p-2 font-bold text-main1 hover:bg-main2 hover:text-main5-t"%}
                         </div>
                         <div>
                             <button hx-get="{% url 'updateProfile' Profile.user.id %}" hx-target="#ProfileContent"
                                 hx-swap="innerHTML"
                                 class="inline-block border-e p-3 rounded-md drop-shadow-lg text-main1-t bg-main3-t hover:bg-main2 hover:text-main5-t focus:relative"
-                                title="Edit">
+                                title="{% trans "Edit" %}">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
                                     <path stroke-linecap="round" stroke-linejoin="round"

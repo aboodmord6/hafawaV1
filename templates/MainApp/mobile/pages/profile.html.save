@@ -1,0 +1,90 @@
+{% extends "MainApp/mobile/index.html" %}
+{% load static %}
+{% load i18n %}
+{% load webpush_notifications %}
+{% block main %}
+<div class="flex flex-col itme-center px-2 pt-2 ">
+    <h1 class=" mx-2 mb-2 text-2xl font-bold animate-fade-in">{% trans "الحساب الشخصي" %}</h1>
+    <div class="h-32 max-w-full  bg-gradient-to-t from-rows  rounded-xl p-4 flex items-center animate-slide-in  ">
+        <div class="h-16 max-w-16 bg-white rounded-3xl flex justify-center">
+            <img class="h-full w-full rounded-3xl" src="{{Profile.personalPhoto.url}}" alt="{% trans "Photo profile" %}" />
+        </div>
+        <div class="flex flex-col justify-center ml-4">
+            <h1 class=" mx-2 text-2xl font-bold">{{Profile.user.first_name}} {{Profile.user.last_name}}</h1>
+        </div>
+    </div>
+    <div class=" h-full bg-rows rounded-xl p-4 mt-2 shadow-xl animate-slide-in animation-delay-75 ">
+        <div class="grid md:grid-cols-2 text-sm items-end">
+            <div class="grid grid-cols-3">
+                <div class="px-4 py-2 font-semibold">{% trans "البريد الالكتروني" %}</div>
+                <div class="px-4 py-2 col-span-2">
+                    {{Profile.user.email}}
+                </div>
+            </div>
+            <div class="grid grid-cols-3">
+                <div class="px-4 py-2 font-semibold">{% trans "رقم التواصل" %}</div>
+                <div class="px-4 py-2 col-span-2">{{Profile.user.phone}} {{Profile.user.cp}}+</div>
+            </div>
+            <div class="grid grid-cols-3">
+                <div class="px-4 py-2 font-semibold">{% trans "رقم هاتف" %}</div>
+                <div class="px-4 py-2 col-span-2">{{Profile.homephone}} {{Profile.cp}}+</div>
+            </div>
+
+            <div class="grid grid-cols-3">
+                <div class="px-4 py-2 font-semibold">{% trans "الجنسية" %}</div>
+                <div class="px-4 py-2 col-span-2">{{Profile.nationalty}}</div>
+            </div>
+
+        </div>
+
+        <hr class="h-1 bg-rows my-2 rounded-2xl">
+        <ul>
+
+            <li>
+                <a href="{% url 'index' %}"
+                    class="block rounded-lg px-4 py-2 text-2xl font-medium border text-center text-main4-t bg-[#32323232] hover:bg-gray-100 hover:text-gray-700">
+                    {% trans "الصفحة الرئيسية" %}
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'order' %}"
+                    class="block rounded-lg px-4 py-2 mt-2 text-2xl font-medium border text-center text-main4-t bg-[#32323232] hover:bg-gray-100 hover:text-gray-700">
+                    {% trans "الطلبات" %}
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'updateProfile' Profile.user.id %}"
+                    class="block rounded-lg px-4 py-2 mt-2 text-2xl font-medium border text-center text-main4-t bg-[#32323232] hover:bg-gray-100 hover:text-gray-700">
+                    {% trans "تعديل المعلومات الشخصية" %}
+                </a>
+            </li>
+            <li>
+                <span id="sub" sub="{{sub}}" class="hidden"></span>
+                {% webpush_button with_class="block w-full rounded-lg px-4 py-2 mt-2 text-2xl font-medium border text-center text-main4-t bg-[#32323232] hover:bg-gray-100 hover:text-gray-700" %}
+            </li>
+            <li>
+                <form action="{% url 'set_language' %}" method="post" style="display: flex; gap: 4px; margin-top: 8px;">{% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select name="language" style="border: none; border-radius: 5px; width: 100%;">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit"><img src="{% static 'icons/translate.png' %}" alt=""></button>
+                </form>
+            </li>
+            <li class="flex">
+                <a href="{% url 'logout' %}"
+                    class="w-full rounded-lg px-4 py-2 mt-2 text-2xl  font-medium border text-center text-main4-t bg-[#32323232] hover:bg-gray-100 hover:text-gray-700 ">
+                    {% trans "تسجيل الخروج" %}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock main %}
